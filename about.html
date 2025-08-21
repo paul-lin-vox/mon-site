@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ==================== BASE / SEO ==================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- TITLE + META -->
+  <title>À propos — Elpton, agence web en Côte d’Ivoire | Expertise et équipe</title>
+  <meta name="description" content="Apprenez à connaître Elpton : notre équipe, notre expertise en création de sites web, e-commerce, SEO et solutions digitales sur mesure pour booster votre présence en ligne." />
+  <meta name="keywords" content="Elpton, agence web, à propos, équipe web, expertise digitale, création site internet, SEO, Abidjan, Côte d'Ivoire" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://www.elpton.com/about" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="À propos d’Elpton — Agence web en Côte d’Ivoire" />
+  <meta property="og:description" content="Découvrez notre équipe et notre expertise : création de sites web, e-commerce, SEO et solutions digitales sur mesure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1600&auto=format&fit=crop" />
+  <meta property="og:url" content="https://www.elpton.com/about" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD Schema pour Organisation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elpton",
+    "url": "https://www.elpton.com/about",
+    "logo": "https://www.elpton.com/favicon.png",
+    "description": "Elpton est une agence web spécialisée dans la création de sites vitrines, e-commerce, SEO et solutions digitales sur mesure. Basée à Abidjan, Côte d’Ivoire.",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61578419139752",
+      "https://wa.me/2250712976635"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "contact@elpton.com"
+    }]
+  }
+  </script>
+
+  <!-- Tailwind & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- ==================== STYLES ==================== -->
+  <style>
+    :root{
+      --brand-1:#3b82f6;
+      --brand-2:#8b5cf6;
+      --ink:#0f172a;
+      --muted:#475569;
+      --bg:#f8fafc;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"}
+
+    .gradient-text{background:linear-gradient(90deg,var(--brand-1),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .card-hover{transition:transform .3s ease, box-shadow .3s ease}
+    .card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 40px -20px rgba(2,6,23,.25)}
+    .nav-link{position:relative}
+    .nav-link:after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:linear-gradient(90deg,var(--brand-1),var(--brand-2));transition:width .3s ease}
+    .nav-link:hover:after{width:100%}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:translateY(0)}
+    .parallax{position:relative;overflow:hidden}
+    .parallax .layer{position:absolute;inset:auto;pointer-events:none;will-change:transform}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .floating{animation:float 6s ease-in-out infinite}
+  </style>
+</head>
+
+<body class="bg-[var(--bg)] text-slate-800">
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Retour accueil">
+          <span class="text-xl font-extrabold text-slate-900">El<span class="gradient-text">pton</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm font-medium text-slate-900">Accueil</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-slate-900">Services</a>
+          <a href="portfolio.html" class="nav-link text-sm font-medium text-slate-900">Portfolio</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-slate-900">À propos</a>
+          <a href="contact.php" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:shadow-md transition">
+            <i class="fa-solid fa-paper-plane"></i> Contact
+          </a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-600 hover:bg-slate-50" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2">
+        <a href="index.html" class="px-3 py-2 rounded hover:bg-slate-50">Accueil</a>
+        <a href="services.html" class="px-3 py-2 rounded hover:bg-slate-50">Services</a>
+        <a href="portfolio.html" class="px-3 py-2 rounded hover:bg-slate-50">Portfolio</a>
+        <a href="about.html" class="px-3 py-2 rounded hover:bg-slate-50">À propos</a>
+        <a href="contact.php" class="px-3 py-2 rounded bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative bg-gradient-to-r from-indigo-50 to-white py-24 overflow-hidden page-enter">
+    <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-30 floating"></div>
+    <div class="absolute bottom-0 right-0 w-48 h-48 bg-purple-200 rounded-full opacity-20 floating"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm text-indigo-600 font-semibold mb-2">À propos de</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        El<span class="gradient-text">pton</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+        Transformons vos idées en réalité digitale. Découvrez notre mission, notre vision et notre équipe de professionnels passionnés par le développement web.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="py-20 bg-gray-50 page-enter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80" alt="Notre équipe" class="rounded-xl shadow-lg w-full">
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Notre Mission</h2>
+        <p class="text-gray-600 mb-6">
+          Offrir des solutions web sur mesure, modernes et performantes pour accompagner nos clients dans leur succès numérique.
+        </p>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Notre Vision</h2>
+        <p class="text-gray-600">
+          Devenir un acteur de référence en développement digital en Côte d'Ivoire, reconnu pour la qualité, l’innovation et la satisfaction client.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notre Approche et Engagement Social -->
+  <section class="py-20 bg-gray-100 page-enter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Notre Approche et Engagement Social</h2>
+      
+      <div class="max-w-4xl mx-auto space-y-6 text-gray-700 text-lg">
+        <p>
+          Chez <span class="font-semibold">Elpton</span>, nous combinons le talent humain et l'intelligence artificielle pour offrir des solutions digitales de pointe. L'IA nous permet d'accélérer la création, d'assurer la qualité technique et de proposer des fonctionnalités innovantes tout en accompagnant nos étudiants dans leur apprentissage.
+        </p>
+        
+        <p>
+          Notre équipe est composée majoritairement d'étudiants en informatique, motivés et passionnés. Cette approche nous permet de proposer des prestations de haute qualité à des tarifs très compétitifs, accessibles à toutes les entreprises et entrepreneurs en Côte d'Ivoire. C'est notre manière de rendre la technologie et le développement web plus inclusifs.
+        </p>
+
+        <p>
+          Nous voulons permettre à tout un chacun d’avoir une présence en ligne facilement et rapidement, sans complexité inutile. Notre objectif est de simplifier l’accès au web pour que chacun puisse mettre en valeur ses idées, son entreprise ou ses projets personnels.
+        </p>
+
+        <p>
+          Au-delà de la création de sites web, notre engagement est social et éducatif. Chaque projet devient une opportunité pour nos étudiants d'acquérir de l'expérience concrète, tout en contribuant au développement numérique et économique local. Nous croyons fermement que la technologie doit servir à la fois les entreprises et la communauté.
+        </p>
+
+        <p>
+          Nos solutions sont pensées pour avoir un impact réel : stimuler l’entrepreneuriat, faciliter l’accès à des outils modernes et encourager la montée en compétence des jeunes talents. Choisir <span class="font-semibold">Elpton</span>, c’est soutenir une vision où innovation, apprentissage et responsabilité sociale vont de pair.
+        </p>
+
+        <p>
+          Nous sommes fiers de mettre la technologie au service de la croissance des entreprises et du développement local, tout en gardant notre approche humaine et sociale au cœur de chaque projet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- APPEL À L’ACTION FINAL -->
+  <section class="bg-indigo-600 text-white py-20 mt-16 rounded-lg relative overflow-hidden">
+    <!-- Bulles animées dans le CTA -->
+    <div class="absolute bottom-0 right-0 w-48 h-48 bg-purple-200 rounded-full opacity-20 floating"></div>
+    <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-30 floating"></div>
+    
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Prêt à donner vie à votre projet ?</h2>
+        <p class="text-lg mb-8">Chez <span class="font-semibold">Elpton</span>, nous transformons vos idées en sites web modernes et performants.</p>
+        <a href="contact.php" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition">
+            Contactez-nous maintenant
+        </a>
+    </div>
+  </section>
+
+ 
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between gap-10">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-extrabold">El<span class="gradient-text">pton</span></span>
+          </div>
+          <p class="mt-4 text-slate-400 max-w-sm">Transformons vos idées en réalité digitale. Développement web sur mesure, SEO et automatisation.</p>
+        </div>
+
+        <nav class="grid grid-cols-2 md:grid-cols-3 gap-8" aria-label="Liens de pied de page">
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li><a href="mailto:contact@elpton.com" class="text-slate-300 hover:text-white">contact@elpton.com</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Création de site</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Référencement (SEO)</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Maintenance</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Automatisation & intégrations</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">Marketing digital</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">HEBERGEMENT</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">CV EN LIGNE</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Légal</h4>
+            <ul class="space-y-2">
+              <li><a class="text-slate-300 hover:text-white" href="mentions-legales.html">Mentions légales</a></li>
+              <li><a class="text-slate-300 hover:text-white" href="politique-confidentialite.html">Politique de confidentialité</a></li>
+              <li><a class="text-slate-300 hover:text-white" href="conditions-generales.html">Conditions générales</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-slate-400">© 2025 Elpton. Tous droits réservés.</p>
+        <div class="flex items-center gap-5" aria-label="Réseaux sociaux">
+          <a href="https://www.facebook.com/profile.php?id=61578419139752" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-slate-300 hover:text-white" aria-label="X / Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path d="M17.5 3H21l-6.9 7.9L22.8 21h-6.4l-5.1-6-5.9 6H3l7.4-8.4L1.5 3h6.5l4.5 5.3L17.5 3z"/></svg>
+          </a>
+          <a href="#" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/2250712976635" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById("mobile-menu-button").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+
+    // Page transition animation
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll(".page-enter");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("page-enter-active");
+          });
+        },
+        { threshold: 0.1 }
+      );
+      sections.forEach((section) => observer.observe(section));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ==================== BASE / SEO ==================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- TITLE + META -->
+  <title>Services web Elpton — Création de sites, e-commerce, SEO & maintenance</title>
+  <meta name="description" content="Découvrez les services Elpton : création de sites vitrines, boutiques en ligne, SEO, maintenance et automatisation en Côte d’Ivoire. Des solutions modernes et performantes adaptées à vos besoins." />
+  <meta name="keywords" content="services web, création de site vitrine, boutique en ligne, SEO, maintenance site, intégration paiement, automatisation, Elpton, Abidjan" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://www.elpton.com/services" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Nos Services — Elpton" />
+  <meta property="og:description" content="Création de sites web modernes, SEO, maintenance, boutiques en ligne et automatisation. Découvrez nos services digitaux sur mesure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1600&auto=format&fit=crop" />
+  <meta property="og:url" content="https://www.elpton.com/services" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD Schema pour Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Développement web & SEO",
+    "provider": {
+      "@type": "Organization",
+      "name": "Elpton",
+      "url": "https://www.elpton.com/services",
+      "logo": "https://www.elpton.com/favicon.png",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61578419139752",
+        "https://wa.me/2250712976635"
+      ]
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Abidjan, Côte d'Ivoire"
+    },
+    "description": "Création de sites vitrines, e-commerce, SEO, maintenance et automatisation pour booster votre présence en ligne."
+  }
+  </script>
+
+  <!-- Tailwind & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- ==================== STYLES ==================== -->
+  <style>
+    :root{
+      --brand-1:#3b82f6;
+      --brand-2:#8b5cf6;
+      --ink:#0f172a;
+      --muted:#475569;
+      --bg:#f8fafc;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"}
+
+    .gradient-text{background:linear-gradient(90deg,var(--brand-1),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .card-hover{transition:transform .3s ease, box-shadow .3s ease}
+    .card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 40px -20px rgba(2,6,23,.25)}
+    .nav-link{position:relative}
+    .nav-link:after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:linear-gradient(90deg,var(--brand-1),var(--brand-2));transition:width .3s ease}
+    .nav-link:hover:after{width:100%}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:translateY(0)}
+    .parallax{position:relative;overflow:hidden}
+    .parallax .layer{position:absolute;inset:auto;pointer-events:none;will-change:transform}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .floating{animation:float 6s ease-in-out infinite}
+  </style>
+</head>
+
+<body class="bg-[var(--bg)] text-slate-800">
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Retour accueil">
+          <span class="text-xl font-extrabold text-slate-900">El<span class="gradient-text">pton</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm font-medium text-slate-900">Accueil</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-slate-900">Services</a>
+          <a href="portfolio.html" class="nav-link text-sm font-medium text-slate-900">Portfolio</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-slate-900">À propos</a>
+          <a href="contact.php" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:shadow-md transition">
+            <i class="fa-solid fa-paper-plane"></i> Contact
+          </a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-600 hover:bg-slate-50" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2">
+        <a href="index.html" class="px-3 py-2 rounded hover:bg-slate-50">Accueil</a>
+        <a href="services.html" class="px-3 py-2 rounded hover:bg-slate-50">Services</a>
+        <a href="portfolio.html" class="px-3 py-2 rounded hover:bg-slate-50">Portfolio</a>
+        <a href="about.html" class="px-3 py-2 rounded hover:bg-slate-50">À propos</a>
+        <a href="contact.php" class="px-3 py-2 rounded bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+<!-- HERO / TITRE -->
+<section class="relative bg-gradient-to-r from-indigo-50 to-white py-24 overflow-hidden">
+  <!-- Décorations légères -->
+  <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-30 animate-[float_6s_ease-in-out_infinite]"></div>
+  <div class="absolute bottom-0 right-0 w-48 h-48 bg-purple-200 rounded-full opacity-20 animate-[float_8s_ease-in-out_infinite]"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-sm text-indigo-600 font-semibold mb-2">Bienvenue chez</p>
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      El<span class="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">pton</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+      Découvrez nos services de développement web sur mesure : sites vitrines, e-commerce, maintenance, SEO et bien plus encore.
+    </p>
+  </div>
+</section>
+
+
+<!-- Services Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 page-enter">
+  
+  <!-- HEBERGEMENT -->
+  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+    <div class="h-48 overflow-hidden mb-4">
+      <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1374&q=80" alt="HEBERGEMENT" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-bold mb-2">HEBERGEMENT</h3>
+    <p class="text-gray-600 mb-4">Solutions d’hébergement fiables et rapides pour vos sites web. Offrez une présence en ligne sécurisée et performante.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Hébergement sécurisé</span>
+      <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Performance optimale</span>
+      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Actualisation du site</span>
+    </div>
+  </div>
+
+  <!-- SITE VITRINE -->
+  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+    <div class="h-48 overflow-hidden mb-4">
+      <img src="https://images.unsplash.com/photo-1467232004584-a241de8b3885?auto=format&fit=crop&w=1469&q=80" alt="SITE VITRINE" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-bold mb-2">SITE VITRINE</h3>
+    <p class="text-gray-600 mb-4">Sites vitrines modernes et attractifs pour présenter votre activité et valoriser l’image de votre entreprise.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Design attractif</span>
+      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Navigation intuitive</span>
+      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Responsive design</span>
+    </div>
+  </div>
+
+  <!-- CV EN LIGNE -->
+  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+    <div class="h-48 overflow-hidden mb-4">
+      <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1436&q=80" alt="CV EN LIGNE" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-bold mb-2">CV EN LIGNE</h3>
+    <p class="text-gray-600 mb-4">CV en ligne personnalisés et modernes pour mettre en avant vos compétences partout et sur tous les appareils.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Design personnalisé</span>
+      <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Accessibilité partout</span>
+      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Optimisation professionnelle</span>
+    </div>
+  </div>
+
+  <!-- AUTOMATISATION D'ENTREPRISE -->
+  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+    <div class="h-48 overflow-hidden mb-4">
+      <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1436&q=80" alt="AUTOMATISATION D'ENTREPRISE" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-bold mb-2">AUTOMATISATION D'ENTREPRISE</h3>
+    <p class="text-gray-600 mb-4">Automatisation de vos processus pour gagner du temps et réduire les erreurs, avec des solutions sur mesure pour votre productivité.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Analyse des processus</span>
+      <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Outils sur mesure</span>
+      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Intégration fluide</span>
+    </div>
+  </div>
+
+  <!-- MAINTENANCE DE SITE -->
+  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+    <div class="h-48 overflow-hidden mb-4">
+      <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1374&q=80" alt="MAINTENANCE DE SITE" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-bold mb-2">MAINTENANCE DE SITE</h3>
+    <p class="text-gray-600 mb-4">Assurance d’un site toujours à jour, rapide et sécurisé grâce à une maintenance complète et professionnelle.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Sécurité garantie</span>
+      <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Performance optimale</span>
+      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Support régulier</span>
+    </div>
+  </div>
+
+  <!-- OPTIMISATION SEO -->
+  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+    <div class="h-48 overflow-hidden mb-4">
+      <img src="https://images.unsplash.com/photo-1581091215360-6ba1c9129f5c?auto=format&fit=crop&w=1374&q=80" alt="OPTIMISATION SEO" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-bold mb-2">OPTIMISATION SEO</h3>
+    <p class="text-gray-600 mb-4">Optimisation de votre contenu pour les moteurs de recherche afin d’améliorer votre visibilité et votre trafic organique.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Référencement naturel</span>
+      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Optimisation du contenu</span>
+      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Netlinking</span>
+    </div>
+  </div>
+
+  <!-- MARKETING DIGITAL -->
+  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+    <div class="h-48 overflow-hidden mb-4">
+      <img src="https://images.unsplash.com/photo-1581090700227-2a7b0c203e34?auto=format&fit=crop&w=1374&q=80" alt="MARKETING DIGITAL" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-bold mb-2">MARKETING DIGITAL</h3>
+    <p class="text-gray-600 mb-4">Campagnes Google Ads, réseaux sociaux, e-mail marketing et reporting pour booster votre visibilité et vos conversions.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Google Ads</span>
+      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Social Media</span>
+      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Email Marketing</span>
+    </div>
+  </div>
+
+  <!-- SUPPORT & AUTOMATISATION -->
+  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+    <div class="h-48 overflow-hidden mb-4">
+      <img src="https://images.unsplash.com/photo-1581090700227-2a7b0c203e34?auto=format&fit=crop&w=1374&q=80" alt="SUPPORT & AUTOMATISATION" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-bold mb-2">SUPPORT & AUTOMATISATION</h3>
+    <p class="text-gray-600 mb-4">Mise en place de systèmes automatisés et support continu pour simplifier la gestion de vos processus.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Formulaires interactifs</span>
+      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Systèmes d'automatisation</span>
+      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Support continu</span>
+    </div>
+  </div>
+    <!-- SUPPORT & AUTOMATISATION -->
+  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+    <div class="h-48 overflow-hidden mb-4">
+      <img src="https://images.unsplash.com/photo-1581090700227-2a7b0c203e34?auto=format&fit=crop&w=1374&q=80" alt="SUPPORT & AUTOMATISATION" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-bold mb-2">SUPPORT & AUTOMATISATION</h3>
+    <p class="text-gray-600 mb-4">Mise en place de systèmes automatisés et support continu pour simplifier la gestion de vos processus.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Formulaires interactifs</span>
+      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Systèmes d'automatisation</span>
+      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Support continu</span>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- APPEL À L’ACTION FINAL -->
+<section class="bg-indigo-600 text-white py-20 mt-16 rounded-lg relative overflow-hidden">
+    <!-- Bulles animées dans le CTA -->
+    <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-30 floating"></div>
+    <div class="absolute bottom-0 right-0 w-48 h-48 bg-purple-200 rounded-full opacity-20 floating"></div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Prêt à donner vie à votre projet ?</h2>
+        <p class="text-lg mb-8">Chez <span class="font-semibold">Elpton</span>, nous transformons vos idées en sites web modernes et performants.</p>
+        <a href="contact.php" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition">
+            Contactez-nous maintenant
+        </a>
+    </div>
+</section>
+
+<!-- Footer (identique) -->
+<footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between gap-10">
+        <div>
+          <div class="flex items-center gap-2">
+            <a href="index.html"><span class="text-xl font-extrabold">El<span class="gradient-text">pton</span></span></a>
+          </div>
+          <p class="mt-4 text-slate-400 max-w-sm">Transformons vos idées en réalité digitale. Développement web sur mesure, SEO et automatisation.</p>
+        </div>
+
+        <nav class="grid grid-cols-2 md:grid-cols-3 gap-8" aria-label="Liens de pied de page">
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li><a href="mailto:contact@elpton.com" class="text-slate-300 hover:text-white">contact@elpton.com</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Création de site</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Référencement (SEO)</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Maintenance</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Automatisation & intégrations</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">Marketing digital</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">HEBERGEMENT</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">CV EN LIGNE</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Légal</h4>
+            <ul class="space-y-2">
+              <li><a class="text-slate-300 hover:text-white" href="mentions-legales.html">Mentions légales</a></li>
+              <li><a class="text-slate-300 hover:text-white" href="politique-confidentialite.html">Politique de confidentialité</a></li>
+              <li><a class="text-slate-300 hover:text-white" href="conditions-generales.html">Conditions générales</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-slate-400">© 2025 Elpton. Tous droits réservés.</p>
+        <div class="flex items-center gap-5" aria-label="Réseaux sociaux">
+          <a href="https://www.facebook.com/profile.php?id=61578419139752" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-slate-300 hover:text-white" aria-label="X / Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path d="M17.5 3H21l-6.9 7.9L22.8 21h-6.4l-5.1-6-5.9 6H3l7.4-8.4L1.5 3h6.5l4.5 5.3L17.5 3z"/></svg>
+          </a>
+          <a href="#" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/2250712976635" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.getElementById("mobile-menu-button").addEventListener("click", function () {
+  document.getElementById("mobile-menu").classList.toggle("hidden");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".page-enter");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add("page-enter-active");
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(section => observer.observe(section));
+});
+</script>
+
+</body>
+</html>

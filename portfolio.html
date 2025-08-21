@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ==================== BASE / SEO ==================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Réalisations web par Elpton | Sites modernes & SEO</title>
+  <meta name="description" content="Découvrez le portfolio d’Elpton : projets de sites vitrines, e-commerce et solutions digitales modernes. Design responsive, SEO optimisé et intégration sur mesure." />
+  <meta name="keywords" content="portfolio web, projets site vitrine, création e-commerce, développement web, SEO, responsive design, Elpton, Abidjan" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.elpton.com/portfolio" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Portfolio — Réalisations web par Elpton" />
+  <meta property="og:description" content="Découvrez nos projets : sites vitrines, e-commerce, SEO et automatisation. Expertise digitale avec Elpton." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" />
+  <meta property="og:url" content="https://www.elpton.com/portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD Schema (Portfolio/CreativeWork) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Portfolio Elpton",
+    "description": "Découvrez les réalisations d’Elpton en création de sites vitrines, e-commerce et solutions web modernes.",
+    "url": "https://www.elpton.com/portfolio",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Elpton",
+      "url": "https://www.elpton.com/",
+      "logo": "https://www.elpton.com/favicon.png"
+    }
+  }
+  </script>
+
+  <!-- Tailwind & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- ==================== STYLES ==================== -->
+  <style>
+    :root{
+      --brand-1:#3b82f6;
+      --brand-2:#8b5cf6;
+      --ink:#0f172a;
+      --muted:#475569;
+      --bg:#f8fafc;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"}
+
+    .gradient-text{background:linear-gradient(90deg,var(--brand-1),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .card-hover{transition:transform .3s ease, box-shadow .3s ease}
+    .card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 40px -20px rgba(2,6,23,.25)}
+    .nav-link{position:relative}
+    .nav-link:after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:linear-gradient(90deg,var(--brand-1),var(--brand-2));transition:width .3s ease}
+    .nav-link:hover:after{width:100%}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:translateY(0)}
+    .parallax{position:relative;overflow:hidden}
+    .parallax .layer{position:absolute;inset:auto;pointer-events:none;will-change:transform}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .floating{animation:float 6s ease-in-out infinite}
+  </style>
+</head>
+
+<body class="bg-[var(--bg)] text-slate-800">
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Retour accueil">
+          <span class="text-xl font-extrabold text-slate-900">El<span class="gradient-text">pton</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-sm font-medium text-slate-900">Accueil</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-slate-900">Services</a>
+          <a href="portfolio.html" class="nav-link text-sm font-medium text-slate-900">Portfolio</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-slate-900">À propos</a>
+          <a href="contact.php" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:shadow-md transition">
+            <i class="fa-solid fa-paper-plane"></i> Contact
+          </a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-600 hover:bg-slate-50" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2">
+        <a href="index.html" class="px-3 py-2 rounded hover:bg-slate-50">Accueil</a>
+        <a href="services.html" class="px-3 py-2 rounded hover:bg-slate-50">Services</a>
+        <a href="portfolio.html" class="px-3 py-2 rounded hover:bg-slate-50">Portfolio</a>
+        <a href="about.html" class="px-3 py-2 rounded hover:bg-slate-50">À propos</a>
+        <a href="contact.php" class="px-3 py-2 rounded bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+<!-- HERO -->
+<section class="pt-12 pb-10 bg-gradient-to-r from-white to-indigo-50 page-enter">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <p class="text-sm text-indigo-600 font-semibold">Bienvenue</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Nous créons des sites modernes, rapides et responsives pour vous !</h2>
+      <div class="mt-6 flex gap-3">
+        <a href="contact.php" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md shadow-sm">Demander un devis</a>
+        <a href="about.html" class="inline-flex items-center px-4 py-2 border rounded-md">En savoir plus sur nous</a>
+      </div>
+      <div class="mt-8 p-4 bg-white rounded-lg border">
+        <h3 class="text-sm font-semibold">Nos compétences</h3>
+        <p class="text-sm text-gray-500">Création de sites web, boutiques en ligne, maintenance, optimisation SEO, intégration de moyens de paiement et bien plus encore.</p>
+      </div>
+    </div>
+    <div class="order-first md:order-last relative">
+      <!-- VIDEO / ILLUSTRATION -->
+      <div class="w-full h-64 bg-gradient-to-br from-indigo-100 to-white rounded-lg flex items-center justify-center border card-hover relative overflow-hidden">
+        <video width="640" height="360" autoplay muted loop class="rounded-lg">
+          <source src="fo.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+        <!-- BULLES -->
+        <div class="absolute top-10 left-5 w-6 h-6 bg-white opacity-50 rounded-full floating"></div>
+        <div class="absolute top-20 right-10 w-4 h-4 bg-white opacity-40 rounded-full floating"></div>
+        <div class="absolute bottom-10 left-1/3 w-5 h-5 bg-white opacity-30 rounded-full floating"></div>
+        <div class="absolute bottom-20 right-1/4 w-6 h-6 bg-white opacity-40 rounded-full floating"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="max-w-7xl mx-auto px-4 space-y-16 page-enter">
+<div>
+  <h2 class="text-2xl font-semibold mb-4">Sites vitrines</h2>
+  <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-400">
+    <!-- Projet exemple -->
+    <div class="min-w-[250px] bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer" 
+         onclick="openModal('Le petit café', 'Site pour un café / restaurant . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
+      <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg">
+      <div class="p-4"><h3 class="font-medium">Le petit café <br> Site pour un café / restaurant .</h3></div>
+    </div>
+    <div class="min-w-[250px] bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer" 
+         onclick="openModal('Site de Photographe', 'Galeri d\'image , bio de l\'artiste , formulaire de contact. ' , 'imagehero.jpg')">
+      <img src="imagehero.jpg" alt="Site Vitrine 2" class="rounded-t-lg">
+      <div class="p-4"><h3 class="font-medium">Site de Photographe <br> type : vitrinre </h3></div>
+    </div>
+     <div class="min-w-[250px] bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer" 
+         onclick="openModal('Site Vitrine 1', 'Description fictive pour Site Vitrine 1...', 'imagehero.jpg')">
+      <img src="imagehero.jpg" alt="Site Vitrine 1" class="rounded-t-lg">
+      <div class="p-4"><h3 class="font-medium">Site Vitrine 1</h3></div>
+    </div>
+    <div class="min-w-[250px] bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer" 
+         onclick="openModal('Site Vitrine 2', 'Description fictive pour Site Vitrine 2...', 'imagehero.jpg')">
+      <img src="imagehero.jpg" alt="Site Vitrine 2" class="rounded-t-lg">
+      <div class="p-4"><h3 class="font-medium">Site Vitrine 2</h3></div>
+    </div>
+     <div class="min-w-[250px] bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer" 
+         onclick="openModal('Site Vitrine 1', 'Description fictive pour Site Vitrine 1...', 'imagehero.jpg')">
+      <img src="imagehero.jpg" alt="Site Vitrine 1" class="rounded-t-lg">
+      <div class="p-4"><h3 class="font-medium">Site Vitrine 1</h3></div>
+    </div>
+    <div class="min-w-[250px] bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer" 
+         onclick="openModal('Site Vitrine 2', 'Description fictive pour Site Vitrine 2...', 'imagehero.jpg')">
+      <img src="imagehero.jpg" alt="Site Vitrine 2" class="rounded-t-lg">
+      <div class="p-4"><h3 class="font-medium">Site Vitrine 2</h3></div>
+    </div>
+    <div class="min-w-[250px] bg-gradient-to-br from-indigo-500 to-purple-500 text-white rounded-lg flex flex-col items-center justify-center shadow-lg cursor-pointer">
+      <h3 class="text-lg font-bold mb-2">Créez le vôtre</h3>
+      <p class="text-sm mb-4">Votre projet mérite d'être en ligne.</p>
+      <button class="bg-white text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100"><a href="contact.php">Contactez-nous</a></button>
+    </div>
+  </div>
+</div>
+</section>
+<!-- section a copier  -->
+
+<!-- MODAL AMÉLIORÉE -->
+<div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
+  <div class="bg-white rounded-lg shadow-lg max-w-lg w-full relative overflow-hidden">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-lg font-bold">✖</button>
+    <img id="modalImage" src="" alt="Projet" class="w-full h-64 object-cover">
+    <div class="p-6">
+      <h3 id="modalTitle" class="text-xl font-bold mb-4"></h3>
+      <p id="modalDescription" class="text-gray-600 mb-6"></p>
+      <div class="flex gap-4">
+        <a id="modalSiteLink" href="#" target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Voir le site</a>
+        <a href="contact.php" class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300">Demander un devis</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- APPEL À L’ACTION FINAL -->
+<section class="bg-indigo-600 text-white py-20 mt-16 rounded-lg relative overflow-hidden">
+    <!-- Bulles animées dans le CTA -->
+    <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-30 floating"></div>
+    <div class="absolute bottom-0 right-0 w-48 h-48 bg-purple-200 rounded-full opacity-20 floating"></div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Prêt à donner vie à votre projet ?</h2>
+        <p class="text-lg mb-8">Chez <span class="font-semibold">Elpton</span>, nous transformons vos idées en sites web modernes et performants.</p>
+        <a href="contact.php" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition">
+            Contactez-nous maintenant
+        </a>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between gap-10">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-extrabold">El<span class="gradient-text">pton</span></span>
+          </div>
+          <p class="mt-4 text-slate-400 max-w-sm">Transformons vos idées en réalité digitale. Développement web sur mesure, SEO et automatisation.</p>
+        </div>
+
+        <nav class="grid grid-cols-2 md:grid-cols-3 gap-8" aria-label="Liens de pied de page">
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li><a href="mailto:contact@elpton.com" class="text-slate-300 hover:text-white">contact@elpton.com</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Création de site</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Référencement (SEO)</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Maintenance</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Automatisation & intégrations</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">Marketing digital</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">HEBERGEMENT</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">CV EN LIGNE</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Légal</h4>
+            <ul class="space-y-2">
+              <li><a class="text-slate-300 hover:text-white" href="mentions-legales.html">Mentions légales</a></li>
+              <li><a class="text-slate-300 hover:text-white" href="politique-confidentialite.html">Politique de confidentialité</a></li>
+              <li><a class="text-slate-300 hover:text-white" href="conditions-generales.html">Conditions générales</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-slate-400">© 2025 Elpton. Tous droits réservés.</p>
+        <div class="flex items-center gap-5" aria-label="Réseaux sociaux">
+          <a href="https://www.facebook.com/profile.php?id=61578419139752" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-slate-300 hover:text-white" aria-label="X / Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path d="M17.5 3H21l-6.9 7.9L22.8 21h-6.4l-5.1-6-5.9 6H3l7.4-8.4L1.5 3h6.5l4.5 5.3L17.5 3z"/></svg>
+          </a>
+          <a href="#" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/2250712976635" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- SCRIPT JS -->
+<script>
+document.getElementById('mobile-menu-button').addEventListener('click', function() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+});
+
+function openModal(title, description, imageUrl, siteUrl="#") {
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  document.getElementById('modalImage').src = imageUrl;
+  document.getElementById('modalSiteLink').href = siteUrl;
+  const modal = document.getElementById('projectModal');
+  modal.classList.remove('hidden'); modal.classList.add('flex');
+}
+
+function closeModal() {
+  const modal = document.getElementById('projectModal');
+  modal.classList.add('hidden'); modal.classList.remove('flex');
+}
+
+// Smooth scrolling pour anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+    }
+  });
+});
+
+// Animation des sections à l'entrée
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.page-enter');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('page-enter-active'); } });
+  }, { threshold:0.1 });
+  sections.forEach(section => observer.observe(section));
+});
+</script>
+
+</body>
+</html>

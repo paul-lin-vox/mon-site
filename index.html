@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ==================== BASE / SEO ==================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elpton — Création de sites web modernes, rapides et optimisés SEO</title>
+  <meta name="description" content="Elpton conçoit des sites vitrines, e-commerce et solutions d'automatisation. SEO, maintenance, intégration paiement, performance et responsive design." />
+  <meta name="keywords" content="création de site web, e-commerce, SEO, maintenance, automatisation, intégration paiement, Côte d'Ivoire, Abidjan" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Elpton — Création de sites web modernes" />
+  <meta property="og:description" content="Sites vitrines, boutiques en ligne, SEO et automatisation. Transformons vos idées en réussite digitale avec Elpton." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1600&auto=format&fit=crop" />
+  <meta property="og:url" content="https://www.elpton.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elpton",
+    "url": "https://www.elpton.com/",
+    "logo": "https://www.elpton.com/favicon.png",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61578419139752",
+      "https://wa.me/2250712976635"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "contact@elpton.com"
+    }]
+  }
+  </script>
+
+  <!-- Tailwind & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- ==================== STYLES ==================== -->
+  <style>
+    :root{
+      --brand-1:#3b82f6;
+      --brand-2:#8b5cf6;
+      --ink:#0f172a;
+      --muted:#475569;
+      --bg:#f8fafc;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"}
+
+    .gradient-text{background:linear-gradient(90deg,var(--brand-1),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .card-hover{transition:transform .3s ease, box-shadow .3s ease}
+    .card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 40px -20px rgba(2,6,23,.25)}
+    .nav-link{position:relative}
+    .nav-link:after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:linear-gradient(90deg,var(--brand-1),var(--brand-2));transition:width .3s ease}
+    .nav-link:hover:after{width:100%}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:translateY(0)}
+    .parallax{position:relative;overflow:hidden}
+    .parallax .layer{position:absolute;inset:auto;pointer-events:none;will-change:transform}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .floating{animation:float 6s ease-in-out infinite}
+  </style>
+</head>
+<body class="bg-[var(--bg)] text-slate-800">
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-2" aria-label="Retour accueil">
+          <span class="text-xl font-extrabold text-slate-900">El<span class="gradient-text">pton</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#home" class="nav-link text-sm font-medium text-slate-900">Accueil</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-slate-900">Services</a>
+          <a href="portfolio.html" class="nav-link text-sm font-medium text-slate-900">Portfolio</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-slate-900">À propos</a>
+          <a href="contact.php" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:shadow-md transition">
+            <i class="fa-solid fa-paper-plane"></i> Contact
+          </a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-600 hover:bg-slate-50" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2">
+        <a href="#home" class="px-3 py-2 rounded hover:bg-slate-50">Accueil</a>
+        <a href="services.html" class="px-3 py-2 rounded hover:bg-slate-50">Services</a>
+        <a href="portfolio.html" class="px-3 py-2 rounded hover:bg-slate-50">Portfolio</a>
+        <a href="about.html" class="px-3 py-2 rounded hover:bg-slate-50">À propos</a>
+        <a href="contact.php" class="px-3 py-2 rounded bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <header id="home" class="relative parallax">
+    <!-- Decorative blobs -->
+    <div class="layer -z-10" style="top:-40px; right:-60px;">
+      <div class="w-64 h-64 bg-gradient-to-br from-[var(--brand-1)] to-[var(--brand-2)] rounded-full opacity-20 blur-3xl"></div>
+    </div>
+    <div class="layer -z-10" style="bottom:-60px; left:-40px;">
+      <div class="w-72 h-72 bg-gradient-to-tr from-[var(--brand-2)] to-[var(--brand-1)] rounded-full opacity-20 blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <p class="text-sm font-semibold tracking-wide text-[var(--brand-2)] mb-3">Agence web — Abidjan</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+          Création de <span class="gradient-text">sites web modernes</span>, rapides et <span class="gradient-text">optimisés SEO</span>
+        </h1>
+        <p class="text-lg text-slate-600 mb-8 max-w-xl">Sites vitrines, e‑commerce, maintenance, intégration de moyens de paiement, automatisation, gestion de stock, formulaires interactifs et marketing digital.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="contact.php" class="inline-flex items-center gap-2 px-6 py-3 rounded-md text-white font-semibold bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] shadow hover:shadow-lg transition">
+            <i class="fa-solid fa-messages"></i> Demander un devis
+          </a>
+          <a href="portfolio.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-slate-300 text-slate-800 hover:bg-white/60">
+            <i class="fa-solid fa-images"></i> Voir nos réalisations
+          </a>
+        </div>
+        <ul class="mt-8 flex flex-wrap gap-4 text-sm text-slate-600">
+          <li class="inline-flex items-center gap-2"><i class="fa-solid fa-bolt"></i> Performance</li>
+          <li class="inline-flex items-center gap-2"><i class="fa-solid fa-mobile-screen"></i> Responsive</li>
+          <li class="inline-flex items-center gap-2"><i class="fa-solid fa-shield"></i> Sécurité</li>
+          <li class="inline-flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-chart"></i> SEO</li>
+        </ul>
+      </div>
+      <div class="relative reveal">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1400&auto=format&fit=crop" alt="Équipe en développement web" class="rounded-xl shadow-2xl floating" loading="lazy" width="700" height="480" />
+        <div class="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-[var(--brand-2)]/20"></div>
+        <div class="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-[var(--brand-1)]/20"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Nos <span class="gradient-text">services</span></h2>
+        <p class="mt-3 text-lg text-slate-600 max-w-3xl mx-auto">Nous couvrons tout le cycle de vie web : conception, développement, optimisation, automatisation et marketing.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 1. Site vitrine -->
+        <article class="bg-slate-50 p-6 rounded-xl card-hover reveal" aria-label="Service Site vitrine">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4"><i class="fa-solid fa-laptop-code text-blue-600"></i></div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Création de site vitrine</h3>
+          <p class="text-slate-600">Design sur mesure, parcours clair, chargement rapide et SEO-ready pour présenter votre activité avec impact.</p>
+        </article>
+        <!-- 2. Automatisation -->
+        <article class="bg-slate-50 p-6 rounded-xl card-hover reveal" aria-label="Service Automatisation">
+          <div class="w-12 h-12 rounded-lg bg-teal-100 flex items-center justify-center mb-4"><i class="fa-solid fa-robot text-teal-600"></i></div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Automatisation & intégrations</h3>
+          <p class="text-slate-600">Workflows, intégration API, formulaires avancés et systèmes d’emailing/CRM.</p>
+        </article>
+        <!-- 3. Maintenance -->
+        <article class="bg-slate-50 p-6 rounded-xl card-hover reveal" aria-label="Service Maintenance">
+          <div class="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center mb-4"><i class="fa-solid fa-screwdriver-wrench text-emerald-600"></i></div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Maintenance & support</h3>
+          <p class="text-slate-600">Sauvegardes, mises à jour, sécurité, monitoring de performance et support réactif.</p>
+        </article>    
+      </div>
+
+      <div class="text-center mt-10 reveal">
+        <a href="services.html" class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-slate-300 hover:bg-white/60">Découvrir tous nos services <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== À PROPOS ==================== -->
+  <section id="about" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal order-2 lg:order-1">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">À propos de <span class="gradient-text">Epton</span></h2>
+        <p class="text-lg text-slate-600 mb-4">Nous concevons des expériences web modernes, rapides et responsives, adaptées à vos objectifs. Grâce à l’IA et aux meilleures pratiques, nous livrons des sites performants, bien référencés et faciles à faire évoluer.</p>
+        <p class="text-lg text-slate-600 mb-6">Notre promesse : une approche <strong>technique</strong> et <strong>orientée résultats</strong>, de la stratégie à la mise en ligne, avec un accompagnement continu.</p>
+        <ul class="space-y-3 text-slate-700">
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-600"></i> +10 projets livrés (vitrine, e‑commerce, web apps)</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-600"></i> 100% responsive & optimisés Core Web Vitals</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-600"></i> Support réactif & transparent</li>
+        </ul>
+        <div class="mt-8 flex gap-3">
+          <a href="about.html" class="px-5 py-3 rounded-md border border-slate-300 hover:bg-white">En savoir plus</a>
+          <a href="contact.php" class="px-5 py-3 rounded-md text-white bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)]">Nous contacter</a>
+        </div>
+      </div>
+      <div class="reveal order-1 lg:order-2 relative">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1400&auto=format&fit=crop" alt="Collaboration équipe projet web" class="rounded-xl shadow-2xl" loading="lazy" width="700" height="480" />
+        <div class="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-[var(--brand-2)]/20"></div>
+        <div class="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-[var(--brand-1)]/20"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO ==================== -->
+  <section id="portfolio" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Notre <span class="gradient-text">portfolio</span></h2>
+        <p class="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">Quelques exemples représentatifs. Détails et études de cas à découvrir sur la page portfolio.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <article class="bg-white rounded-xl overflow-hidden shadow card-hover reveal">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600&auto=format&fit=crop" alt="Boutique en ligne LuxeMode" class="h-48 w-full object-cover" loading="lazy" width="600" height="320" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-900 mb-1">LuxeMode — Boutique en ligne</h3>
+            <p class="text-slate-600 mb-3">E‑commerce premium avec paiement sécurisé, gestion de stock et SEO renforcé.</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800">E‑commerce</span>
+              <span class="px-3 py-1 rounded-full bg-violet-100 text-violet-800">SEO</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800">Responsive</span>
+            </div>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="bg-white rounded-xl overflow-hidden shadow card-hover reveal">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8b3885?q=80&w=1600&auto=format&fit=crop" alt="Site corporate FinExpert" class="h-48 w-full object-cover" loading="lazy" width="600" height="320" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-900 mb-1">FinExpert — Corporate</h3>
+            <p class="text-slate-600 mb-3">Site institutionnel avec espace client sécurisé et intégration CRM.</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800">Corporate</span>
+              <span class="px-3 py-1 rounded-full bg-violet-100 text-violet-800">Sécurité</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800">CMS</span>
+            </div>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="bg-white rounded-xl overflow-hidden shadow card-hover reveal">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop" alt="FoodTracker application web" class="h-48 w-full object-cover" loading="lazy" width="600" height="320" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-900 mb-1">FoodTracker — Web App</h3>
+            <p class="text-slate-600 mb-3">Suivi nutritionnel, tableau de bord personnalisable et API mobile.</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800">Web App</span>
+              <span class="px-3 py-1 rounded-full bg-violet-100 text-violet-800">Mobile</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800">API</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-10 reveal">
+        <a href="portfolio.html" class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-slate-300 hover:bg-slate-50">Voir plus de projets <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA FINAL ==================== -->
+  <section class="py-16 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Prêt à lancer votre projet ?</h2>
+      <p class="text-lg/relaxed text-white/90 max-w-2xl mx-auto">Discutons de vos objectifs et transformons vos idées en réalité digitale. Réponse sous 24h ouvrées.</p>
+      <div class="mt-6">
+        <a href="contact.php" class="inline-flex items-center gap-2 px-6 py-3 rounded-md font-semibold bg-white/10 backdrop-blur border border-white/20 hover:bg-white/20">
+          <i class="fa-solid fa-envelope"></i> Demander un devis
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER (reprend le tien, amélioré accessibilité) ==================== -->
+  <footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between gap-10">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-extrabold">El<span class="gradient-text">pton</span></span>
+          </div>
+          <p class="mt-4 text-slate-400 max-w-sm">Transformons vos idées en réalité digitale. Développement web sur mesure, SEO et automatisation.</p>
+        </div>
+
+        <nav class="grid grid-cols-2 md:grid-cols-3 gap-8" aria-label="Liens de pied de page">
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li><a href="mailto:contact@elpton.com" class="text-slate-300 hover:text-white">contact@elpton.com</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Création de site</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Référencement (SEO)</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Maintenance</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Automatisation & intégrations</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">Marketing digital</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">HEBERGEMENT</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">CV EN LIGNE</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Légal</h4>
+            <ul class="space-y-2">
+              <li><a class="text-slate-300 hover:text-white" href="mentions-legales.html">Mentions légales</a></li>
+              <li><a class="text-slate-300 hover:text-white" href="politique-confidentialite.html">Politique de confidentialité</a></li>
+              <li><a class="text-slate-300 hover:text-white" href="conditions-generales.html">Conditions générales</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-slate-400">© 2025 Elpton. Tous droits réservés.</p>
+        <div class="flex items-center gap-5" aria-label="Réseaux sociaux">
+          <a href="https://www.facebook.com/profile.php?id=61578419139752" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-slate-300 hover:text-white" aria-label="X / Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path d="M17.5 3H21l-6.9 7.9L22.8 21h-6.4l-5.1-6-5.9 6H3l7.4-8.4L1.5 3h6.5l4.5 5.3L17.5 3z"/></svg>
+          </a>
+          <a href="#" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/2250712976635" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // Mobile menu toggle with aria updates
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if(menuBtn){
+      menuBtn.addEventListener('click', ()=>{
+        const isOpen = mobileMenu.classList.toggle('hidden') ? false : true;
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+
+    // Reveal on scroll (IntersectionObserver)
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
+    },{threshold:0.12});
+    revealEls.forEach(el=>io.observe(el));
+
+    // Parallax (lightweight, rAF)
+    const parallaxRoot = document.querySelector('.parallax');
+    const layers = parallaxRoot ? parallaxRoot.querySelectorAll('.layer') : [];
+    let ticking = false;
+    function onScroll(){
+      if(!parallaxRoot) return;
+      if(!ticking){
+        window.requestAnimationFrame(()=>{
+          const y = window.scrollY || window.pageYOffset;
+          layers.forEach((layer, i)=>{
+            const speed = 0.06 + i*0.04; // différents niveaux
+            layer.style.transform = `translateY(${y * speed}px)`;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+
+    // Smooth anchor scrolling only if target exists (handles on-page #)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        const target = document.querySelector(id);
+        if(target){
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({top, behavior:'smooth'});
+          // close mobile menu if open
+          if(!mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
