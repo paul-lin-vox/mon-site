@@ -1,0 +1,38 @@
+# Active le moteur de réécriture d'URL
+RewriteEngine On
+
+# -------------------------------
+# Redirections des pages principales
+# -------------------------------
+
+# Accueil
+RewriteRule ^accueil$ index.html [L]
+Redirect 301 /index.html /accueil
+
+# Services
+RewriteRule ^services$ services.html [L]
+Redirect 301 /services.html /services
+
+# Portfolio
+RewriteRule ^portfolio$ portfolio.html [L]
+Redirect 301 /portfolio.html /portfolio
+
+# À propos
+RewriteRule ^apropos$ about.html [L]
+Redirect 301 /about.html /apropos
+
+# Contact
+RewriteRule ^contact$ contact.php [L]
+Redirect 301 /contact.php /contact
+
+# condition ge
+RewriteRule ^conditions-generales$ conditions-generales.html [L]
+Redirect 301 /conditions-generales.html /conditions-generales
+# politi
+RewriteRule ^politique-confidentialite$ politique-confidentialite.html [L]
+Redirect 301 /politique-confidentialite.html /politique-confidentialite
+# mentio lega
+RewriteRule ^mentions-legales$ mentions-legales.html [L]
+Redirect 301 /mentions-legales.html /mentions-legales
+
+ErrorDocument 404 /404.html
