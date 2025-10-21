@@ -176,11 +176,43 @@
     @keyframes fadeIn { from { transform: scale(.98); opacity: 0 } to { transform: scale(1); opacity: 1 } }
 
     @media (max-width:900px){
-      .popup-box{ flex-direction: column; }
-      .popup-image{ padding: 18px; }
-      .popup-content{ padding: 18px; }
-      .popup-image .placeholder{ max-height: 260px; }
-    }
+  .popup-box {
+    flex-direction: column;
+    width: 100%;
+    max-width: 95%;
+    height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+  }
+  .popup-image {
+    padding: 10px;
+    height: auto;
+  }
+  .popup-image .placeholder {
+    max-height: 200px;
+    border-radius: 12px;
+  }
+  .popup-content {
+    padding: 16px;
+    text-align: left;
+  }
+  .popup-content h2 {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .popup-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .close-btn {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
+
   </style>
 </head>
 
