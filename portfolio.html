@@ -7,7 +7,7 @@
   <title>Portfolio — Réalisations web par Elpton | Sites modernes & SEO</title>
   <meta name="description" content="Découvrez le portfolio d’Elpton : projets de sites vitrines, e-commerce et solutions digitales modernes. Design responsive, SEO optimisé et intégration sur mesure." />
   <meta name="keywords" content="portfolio web, projets site vitrine, création e-commerce, développement web, SEO, responsive design, Elpton, Abidjan" />
-  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="icon" href="img/Elptonfav.jpg" type="image/png" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.elpton.com/portfolio" />
@@ -32,7 +32,7 @@
       "@type": "Organization",
       "name": "Elpton",
       "url": "https://www.elpton.com/",
-      "logo": "https://www.elpton.com/favicon.png"
+      "logo": "https://www.elpton.com/img/Elptonfav.jpg"
     }
   }
   </script>
@@ -125,7 +125,7 @@
       <!-- VIDEO / ILLUSTRATION -->
       <div class="w-full h-64 bg-gradient-to-br from-indigo-100 to-white rounded-lg flex items-center justify-center border card-hover relative overflow-hidden">
         <video width="640" height="360" autoplay muted loop class="rounded-lg">
-          <source src="fo.mp4" type="video/mp4">
+          <source src="img/fo.mp4" type="video/mp4">
           Votre navigateur ne supporte pas la vidéo HTML5.
         </video>
         <!-- BULLES -->
@@ -139,57 +139,183 @@
 </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- Sites vitrines -->
 <section class="max-w-7xl mx-auto px-4 space-y-16 page-enter">
 <div>
   <h2 class="text-2xl font-semibold mb-4">Sites vitrines</h2>
   <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-400">
-    <!-- Projet exemple -->
+    <!-- Projet le petit café -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', ['le petit café.png','cafeavis.png','cafecon.png','cafehistoire.png','cafehor.png','cafemenu.png'])">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+     onclick="openModal('Le Petit Café – Détente & Gastronomie', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>Le Petit Café</strong> est une vitrine en ligne conçue pour refléter l'ambiance chaleureuse et conviviale d'un café-restaurant. Le design utilise une palette de **couleurs chaudes (ambrées et marron)** pour évoquer le café et la cuisine maison. Il est structuré en une seule page pour un accès rapide aux informations clés : le menu interactif, les horaires (avec événements) et une section contact et carte géographique.</p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li>**HTML5 / Tailwind CSS / Font Awesome 6.4** pour la structure et le stylisme utilitaire.<li>
+      <li>**JavaScript Vanilla ES6** pour la gestion du **menu mobile** et la logique des **onglets de menu** interactifs (Petit-déjeuner, Déjeuner, Boissons).</li>
+      <li>**Carrousel de Témoignages** (slider JS) avec navigation manuelle, rotation automatique ('setInterval') et gestion des indices.</li>
+      <li>**Animations CSS et JavaScript** pour les effets de fondu en entrée ('.fade-in') et le *smooth scrolling* entre les sections.</li>
+      <li>**Design Responsive** avec une attention particulière à la disposition du menu et de la carte sur mobile.</li>
+      </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet est un excellent modèle de site *One-Page* commercial, combinant un design appétissant avec une **navigation utilisateur fluide et complète**. La mise en œuvre des onglets de menu et du carrousel de témoignages démontre une bonne maîtrise de l'interactivité, créant une plateforme <span class='text-indigo-600 font-medium'>chaleureuse, informative et optimisée pour l'expérience client</span>.</p>
+  </div>
+</div>
+`, ['img/le petit café.png','img/cafehistoire.png','img/cafeavis.png','img/cafehor.png','img/cafemenu.png','img/cafecon.png'])">
+        <img src="img/le petit café.png" alt=" le petit café" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+            <h3 class="font-medium text-lg">Le Petit Café – <br> Détente & Gastronomie</h3>
         </div>
     </div>
-    <!-- Projet exemple -->
+    <!-- Projet lumina bijoux  -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+     onclick="openModal(' Lumina Bijoux – Joaillerie Personnalisée', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>Lumina Bijoux</strong> est un site de joaillerie en ligne, conçu pour refléter l'élégance et le luxe des créations. Le design utilise un fond sombre professionnel (gris anthracite/bleu nuit) pour faire ressortir l'éclat des produits. Il met en avant les collections phares, l'histoire de la marque et le processus de fabrication, tout en intégrant des sections dédiées à l'engagement écologique et éthique (pierres et métaux).</p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li><strong>HTML5 / Tailwind CSS / Feather Icons</strong> pour la structure, le style et les icônes légères.</li>
+      <li>**AOS (Animate On Scroll)** pour les animations d'apparition des sections, créant un effet *storytelling* au défilement.</li>
+      <li>**Effets de *Hover*** sur les produits (*jewel-hover*) pour un micro-zoom et une ombre subtile, améliorant l'interactivité.</li>
+      <li>**Système de Navigation sticky** et **Bouton d'appel à l'action flottant** pour une conversion optimisée (ajout au panier / commande).</li>
+      <li>**Carrousel d'Images** (implémentation JS/Swiper.js suggérée) sur les fiches produits pour visualiser les bijoux sous différents angles.</li>
+      </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet illustre une réalisation complète d'un site e-commerce de luxe, démontrant une compréhension des besoins spécifiques de la vente de **produits haut de gamme**. L'utilisation des animations AOS et d'un design sobre mais riche met en évidence la capacité à construire une plateforme <span class='text-indigo-600 font-medium'>esthétique, sécurisée et efficace pour la vente en ligne</span>.</p>
+  </div>
+</div>
+`, ['img/bj1.png','img/bj2.png','img/bj3.png','img/bj4.png','img/bj6.png','img/bj7.png','img/bj5.png'])">
+        <img src="img/bj1.png" alt=" Lumina Bijoux – Joaillerie Personnalisée" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+            <h3 class="font-medium text-lg"> Lumina Bijoux – <br> Joaillerie Personnalisée</h3>
         </div>
     </div>
-    <!-- Projet exemple -->
+    <!-- Projet drillkilla -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+      onclick="openModal('DrillKilla – Site Officiel de l’Artiste Drill', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>DrillKilla</strong> est le site officiel d'un artiste de musique Drill. Le design est volontairement **sombre et agressif** (mode 'dark' par défaut, couleurs noir et rouge sang) pour correspondre à l'esthétique du genre. La page est complète, optimisée pour la découverte rapide des derniers titres, des clips viraux et des dates de tournée, permettant aux fans de s'engager immédiatement.</p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li>**HTML5 / Tailwind CSS / Anime.js** pour la structure, le style et les micro-animations.</li>
+      <li>**Vidéo en arrière-plan** dans la section Hero pour une immersion immédiate dès l'arrivée sur le site.</li>
+      <li>**Typographie impactante** (police 'Bebas Neue' en titre) combinée à un effet **'text-stroke'** en CSS personnalisé.</li>
+      <li>**Effet de grain de bruit ('.bg-noise')** en SVG/CSS pour donner une texture 'sale' et *underground* au fond.</li>
+      <li>**anime.js** utilisé pour l'animation initiale du titre, renforçant l'impact visuel de la marque.</li>
+      <li>Intégration des **iFrames Youtube** pour l'hébergement des clips musicaux.</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet illustre parfaitement comment utiliser le design web pour servir une <span class='text-indigo-600 font-medium'>esthétique de marque forte et nichée</span>. Il démontre une capacité à intégrer des effets visuels avancés (vidéo *hero* text-stroke, bruit) avec des outils modernes (Tailwind, Anime.js) pour créer une plateforme de promotion musicale dynamique et engageante, essentielle pour un artiste Drill. </p>
+  </div>
+</div>
+`, ['img/drill1.png','img/drill2.png','img/drill3.png','img/drill4.png','img/drill5.png'])">
+        <img src="img/drill1.png" alt="DrillKilla Artiste Drill" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+            <h3 class="font-medium text-lg">DrillKilla – <br> Artiste Drill</h3>
         </div>
     </div>
-    <!-- Projet exemple -->
+    <!-- Projet eclat beaute  -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+     onclick="openModal(' Éclat Beauté – Salon de Beauté ', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>Éclat Beauté</strong> est un site *One-Page* au design féminin et haut de gamme. La palette de couleurs est centrée sur le rose (pink-500) et le blanc, inspirant la beauté et la relaxation. Le site est divisé en sections claires (Accueil, Services, Galerie, Contact) pour guider l'utilisateur. L'objectif est de rassurer la clientèle par la qualité visuelle et de convertir les visites en **rendez-vous fermes** via un formulaire de contact explicite.</p>
+    </div>
+    <div>
+      <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+      <ul class='list-disc list-inside space-y-1'>
+        <li><strong>HTML5 / Tailwind CSS / Font Awesome (FA 6.4)</strong> pour la structure, le stylisme utilitaire et l'iconographie des services.</li>
+        <li>**Image Hero en arrière-plan** avec un *overlay* sombre (linear-gradient) pour améliorer la lisibilité du texte d'accueil.</li>
+        <li>**Effets de transformation CSS** sur les cartes de services (.service-card:hover), incluant une translation (translateY) et une ombre pour la profondeur.</li>
+        <li>**Smooth Scrolling (JavaScript)** pour une navigation fluide entre les ancres (#accueil, #services, etc.).</li>
+        <li>**Galerie d'images** (.gallery-item) avec effet de zoom au survol (transform: scale(1.05)).</li>
+        </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet met en œuvre un design séduisant et professionnel pour le secteur de la beauté. Il démontre une bonne maîtrise des techniques CSS modernes pour les micro-interactions (*hover* et *scroll*). C'est une plateforme efficace pour un salon qui cherche à présenter ses prestations et à faciliter la <span class='text-indigo-600 font-medium'>prise de rendez-vous immédiate et le branding de luxe</span>.</p>
+  </div>
+  </div>
+`, ['img/sa1.png','img/sa2.png','img/sa3.png','img/sa4.png','img/sa4.png','img/sa5.png','img/sa6.png','img/sa7.png',])">
+        <img src="img/sa1.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+            <h3 class="font-medium text-lg"> Éclat Beauté – <br> Salon de Beauté </h3>
         </div>
     </div>
-    <!-- Projet exemple -->
+    <!-- Projet massage -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+     onclick="openModal('Éclat Naturel – Spa & Bien-être', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'>**Éclat Naturel** est un site *One-Page* au design classique et apaisant, idéal pour le secteur du bien-être. Il utilise une palette de couleurs naturelles et chaudes (inspirées du bois/terre) pour l'atmosphère. La page est bien structurée avec une section Hero, une galerie, un tableau de tarifs transparent, une section d'avis clients et un pied de page complet avec icônes sociales. L'objectif principal est de présenter une offre de soins complète et accessible.</p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li>**HTML/CSS/JS (Vanilla)** : Structure de base. Le tableau des tarifs utilise des styles CSS en ligne et un effet de survol (:hover) personnalisé pour un aspect professionnel.</li>
+      <li>**Swiper.js** : Utilisé pour créer le carrousel d'avis clients, assurant une rotation et une navigation modernes.</li>
+      <li>**Intersection Observer API (JavaScript)** : Implémenté pour les animations d'apparition des sections au défilement (.hidden devient .show), améliorant l'expérience utilisateur sans impacter la performance.</li>
+      <li>**Font Awesome** : Pour les icônes sociales dans le pied de page.</li>
+      </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet est une très bonne réalisation pour un site de services locaux. L'intégration d'outils externes (Swiper) et de l'API moderne **Intersection Observer** montre une compétence technique solide. Le site est informatif et présente de manière <span class='text-indigo-600 font-medium'>claire et engageante les services et les tarifs</span>,ce qui est crucial pour le commerce local de bien-être.</p>
+  </div>
+  </div>
+`, ['img/sp1.png','img/sp2.png','img/sp3.png','img/sp4.png',])">
+        <img src="img/sp1.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+            <h3 class="font-medium text-lg">Éclat Naturel – <br> Spa & Bien-être</h3>
         </div>
     </div>
-    <!-- Projet exemple -->
+    <!-- Projet nutri -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+     onclick="openModal(' Manger Bien Manger Mieux – Nutritionniste', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>Manger Bien Manger Mieux</strong> est un site vitrine professionnel conçu pour un nutritionniste, orienté vers la **santé et le bien-être**. L'approche visuelle utilise le vert émeraude, symbole de vitalité et de confiance. Le site est divisé en plusieurs pages (Accueil, À propos, Services, Contact) offrant une information claire et détaillée sur les programmes personnalisés, le profil du praticien (DAV), et les modalités de consultation (en ligne/cabinet).</p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li><strong>HTML5 / Tailwind CSS CDN</strong> pour une architecture *multi-page* rapide et un design responsive.</li>
+      <li>**JavaScript Vanilla** pour la gestion du menu mobile et les micro-interactions (e.g., simulation d'envoi de formulaire).</li>
+      <li>**Design axé sur la conversion** avec des appels à l'action clairs ('Prendre RDV') sur chaque page.</li>
+      <li>Intégration d'un **lien WhatsApp** dédié, essentiel pour la qualification rapide des prospects en Afrique de l'Ouest (XOF mentionné).</li>
+      <li>**En-tête *sticky* avec *backdrop-blur*** pour améliorer la lisibilité du menu au défilement.</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet met en valeur la capacité à construire un site de services <span class='text-indigo-600 font-medium'>rassurant, informatif et optimisé pour la prise de rendez-vous</span>. La structure hiérarchisée des pages (présentation, offre, contact) et la simplicité du design (utilisant efficacement Tailwind) garantissent une excellente expérience utilisateur, favorisant la confiance et la fidélisation.</p>
+  </div>
+</div>
+`, ['img/nuti1.png','img/nuti2.png','img/nuti3.png','img/nuti4.png','img/nuti5.png','img/nuti6.png','img/nuti7.png'])">
+        <img src="img/nuti1.png" alt=" site Nutritionniste" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+            <h3 class="font-medium text-lg"> Manger Bien Manger Mieux – <br> Nutritionniste</h3>
         </div>
     </div>
     
@@ -202,55 +328,220 @@
   </div>
 </div>
 </section><br><br><br><br><br>
-<!-- section a copier  -->
+<!-- section a portfolio -->
  <section class="max-w-7xl mx-auto px-4 space-y-16 page-enter">
 <div>
   <h2 class="text-2xl font-semibold mb-4">Sites portfolio</h2>
   <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-400">
+    <!-- Projet photographe -->
+    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
+    onclick="openModal('📸 Sophie Laurent – Portfolio Artistique', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>Sophie Laurent</strong> est un portfolio épuré et sophistiqué, conçu pour mettre en lumière le travail d'une photographe et artiste visuelle . Le design utilise un contraste fort et professionnel (noir et blanc avec des teintes de gris) pour que les images restent le point focal. Il présente une galerie filtrable, une biographie détaillée avec un historique d'expositions et de publications, ainsi qu'un formulaire de contact complet pour les clients et les galeries.</p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li><strong>HTML5 / Tailwind CSS / Font Awesome (FA 6.4)</strong> pour la structure, le stylisme utilitaire et l'iconographie.</li>
+      <li><strong>Système de *LightBox* (Galerie Modale)</strong> entièrement développé en JavaScript Vanilla, incluant la navigation au clavier et le filtre dynamique (Portraits, Urbain, Nature, Abstrait).</li>
+      <li>**Smooth Scrolling** et menu mobile dynamique pour une navigation ergonomique sur tous les appareils.</li>
+      <li>**Animations CSS** personnalisées sur les éléments (ex:'.close:hover' et '.nav-link::after') pour ajouter des micro-interactions élégantes.</li>
+      <li>**Lazy Loading (technique ajoutée)** pour les images de la galerie, garantissant une performance optimale même avec un grand nombre d'œuvres.</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet est une excellente démonstration de la création d'un portfolio <span class='text-indigo-600 font-medium'>artistique, hautement fonctionnel et axé sur l'UX</span>. La gestion complexe de la galerie (filtres, LightBox complète) démontre une    maîtrise avancée du JavaScript, tout en conservant une esthétique minimaliste et professionnelle indispensable dans le secteur de l'art visuel.</p>
+  </div>
+</div>
+`, ['img/s1.png','img/s2.png','img/s3.png','img/s4.png'])">
+        <img src="img/s1.png" alt="Portfolio Artistique" class="rounded-t-lg h-64 w-full object-cover">
+        <div class="p-6">
+            <h3 class="font-medium text-lg"> Portfolio – <br> Artistique</h3>
+        </div>
+    </div>
+
+      <!-- Projet gra  -->
+    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
+      onclick="openModal('🎨 Portfolio – Graphiste', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+      <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+       <p class='leading-relaxed'>Ce portfolio est une démonstration vibrante et créative des      compétences d’un graphiste freelance. Il utilise une palette de couleurs chaudes (rose/orange) pour refléter un style énergique et personnel. Le site est divisé en sections claires (Hero, Projets, Contact) pour guider l'utilisateur. L'objectif est de mettre en valeur les réalisations via une **galerie visuelle impactante**et de générer des demandes de devis via un formulaire engageant.</p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li><strong>HTML5 / Tailwind CSS / CSS personnalisé</strong> pour le stylisme, y compris les gradients et le design de la galerie.</li>
+      <li><strong>Observer API (JavaScript)</strong> pour les animations d’apparition ('.reveal' / 'IntersectionObserver'), assurant une bonne performance au défilement.</li>
+      <li>SVG (Scalable Vector Graphics) utilisé pour les séparateurs de section en *forme de vague ('.wave-divider'), apportant une touche de créativité.</li>
+      <li>Grille flexible (Grid Layout) pour la section Portfolio, offrant une mise en page variée et dynamique.</li>
+      <li>Effet de transformation CSS sur l'image Hero ('transform: rotate-1'), ajoutant une dimension artistique.</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Le projet illustre une excellente maîtrise de la création d'un portfolio<span class='text-indigo-600 font-medium'>artistique, moderne et techniquement soigné</span>.L'utilisation d'animations subtiles et de techniques CSS avancées (gradients,SVG) permet de créer une expérience utilisateur mémorable et de positionner le graphiste comme un professionnel créatif et attentif aux détails.</p>
+  </div>
+</div>
+`, ['img/gra1.png','img/gra2.png','img/gra3.png','img/gra4.png'])">
+        <img src="img/gra1.png" alt=" Portfolio – Graphiste" class="rounded-t-lg h-64 w-full object-cover">
+        <div class="p-6">
+            <h3 class="font-medium text-lg"> Portfolio <br> – Graphiste</h3>
+        </div>
+    </div>
+ 
+    <!-- Projet agence mariage -->
+    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
+     onclick="openModal('💍 Prestige Noces – Agence Wedding Planner', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+   <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>Prestige Noces (Blissful Knots)</strong> est un site vitrine       élégant et complet pour une agence de planification de mariage. Il est organisé en plusieurs sections claires (Services, Portfolio, Témoignages, Contact) et utilise une palette de couleurs douce et professionnelle (rose/gris) pour évoquer le luxe et la confiance. Le but est de convertir les visiteurs intéressés par une planification de mariage haut de gamme. </p>
+  </div>
+<div>
+  <h4  class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li><strong>HTML5 / Tailwind CSS / JavaScript ES6</strong> pour la structure rapide et le stylisme utilitaire.</li>
+      <li><strong>Feather Icons</strong> pour une iconographie légère et cohérente dans les sections Services et Contact.</li>
+      <li><strong>Google Fonts (Playfair Display & Montserrat)</strong> pour établir une typographie élégante et lisible.</li>
+      <li><strong>Effets *Hover*</strong> sur les images du Portfolio (zoom et overlay) pour ajouter du dynamisme.</li>
+      <li><strong>Formulaire de Contact détaillé</strong> (Nom, Email, Date Prévue, Message) pour une qualification optimale des leads.</li>
+    </ul>
+</div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet met en valeur la capacité à concevoir un site vitrine<span class='text-indigo-600 font-medium'>orienté service et confiance</span>. L'accent est mis sur l'expérience utilisateur et l'esthétique, en créant un environnement en ligne qui reflète la qualité et le professionnalisme de l'agence de *Wedding Planning*. Il s'agit d'une réalisation solide pour le secteur de l'événementiel de luxe.</p>
+  </div>
+</div>
+`, ['img/ps1.png','img/ps2.png','img/ps3.png','img/ps4.png','img/ps5.png','img/ps6.png'])">
+        <img src="img/ps1.png" alt="Prestige Noces – Agence Wedding Planner" class="rounded-t-lg h-64 w-full object-cover">
+        <div class="p-6">
+            <h3 class="font-medium text-lg">Prestige Noces  – <br> Agence Wedding Planner</h3>
+        </div>
+    </div>
+    
+    <!-- Projet CoachSport – Perte de Poids & Coaching -->
+    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
+     onclick="openModal('💪 CoachSport – Perte de Poids & Coaching', `
+    <div class='space-y-6 text-gray-700'>
+    <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>CoachSport</strong> est un site de type *One-Page* conçu pour un coach spécialisé dans la perte de poids. Son design sombre et énergique (utilisant la couleur rouge accent) vise à inspirer l'action et la détermination. Il présente de manière concise les programmes personnalisés, le coaching en ligne et en présentiel, une boutique de produits et des témoignages clients, le tout orienté vers une **conversion** sur la réservation de la première séance.</p>
+    </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li><strong>HTML5 / Tailwind CSS CDN / Custom CSS</strong> pour les variables, gradients, et  un effet **'glassmorphism'** sur la barre de navigation.</li>
+      <li><strong>JavaScript Vanilla ES6</strong> pour le menu mobile et la logique du **carrousel d'images** (navigation, *autoplay* et gestion du *swipe* tactile).</li>
+      <li><strong>Animations CSS</strong> ('@keyframes float') sur le badge du Hero pour un micro-effet dynamique.</li>
+      <li>Utilisation de **gradients CSS dynamiques** ('btn-accent', 'btn-alt') pour les boutons d'appel à l'action.</li>
+      <li>Structure de boutique (Produits) avec grille pour une présentation claire et un appel à l'achat immédiat.</li>
+      </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+      <p class='leading-relaxed'>Ce projet démontre une forte capacité à réaliser un site de services personnel <span class='text-indigo-600 font-medium'>à fort impact visuel et fonctionnel</span>.La combinaison de sections claires, d'éléments interactifs comme le carrousel et d'appels à l'action bien placés en fait une excellente vitrine pour le secteur du fitness et du coaching en ligne.</p>
+      </div>
+</div>
+`, ['img/co1.png','img/co2.png','img/co3.png','img/co4.png','img/co5.png'])">
+        <img src="img/co1.png" alt="CoachSport – Perte de Poids & Coaching" class="rounded-t-lg h-64 w-full object-cover">
+        <div class="p-6">
+            <h3 class="font-medium text-lg">CoachSport – <br> Perte de Poids & Coaching</h3>
+        </div>
+    </div>
+    <!-- Projet gat -->
+    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
+     onclick="openModal('Atelier Douceur – Pâtisserie Créative', `
+  <div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>Atelier Douceur</strong> est une vitrine digitale interactive pour une pâtisserie créative. Son design utilise des couleurs douces et pastels (pêche, menthe, lilas) pour évoquer la gourmandise et la délicatesse. Le site est structuré pour présenter les créations sous forme de catalogue avec un **système de nœuds interactifs** et inclut des appels à l'action pour les commandes sur-mesure et l'inscription à des ateliers de pâtisserie.</p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li><strong>HTML5 / Tailwind CSS</strong> pour la structure et un stylisme rapide et responsive.</li>
+      <li><strong>GSAP (GreenSock) & ScrollTrigger</strong> pour les animations d'apparition fluides ('.reveal') et l'effet de défilement immersif.</li>
+      <li>**JavaScript Avancé** pour la création et la gestion de la grille dynamique de projets (*nodes*) en fonction de la taille de l'écran, offrant une navigation interactive.</li>
+      <li>**SVG Morphing** pour les formes organiques en arrière-plan, ajoutant une touche ludique et visuelle.</li>
+      <li>**Formulaire de Contact** avec simulation d'envoi et récupération de données client en JS (pour l'estimation des commandes).</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet met en œuvre un design frais et moderne, idéal pour le secteur de l'artisanat de luxe et de l'alimentation. L'intégration de la bibliothèque GSAP avec un système de mise en page dynamique démontre une maîtrise technique permettant de créer une expérience utilisateur à la fois <span class='text-indigo-600 font-medium'>esthétique, interactive et optimisée pour la conversion</span>.</p>
+  </div>
+</div>
+`, ['img/to1.png','img/to2.png','img/to3.png','img/to4.png'])">
+        <img src="img/to1.png" alt="Atelier Douceur – Pâtisserie Créative" class="rounded-t-lg h-64 w-full object-cover">
+        <div class="p-6">
+            <h3 class="font-medium text-lg"> Atelier Douceur – <br> Pâtisserie Créative</h3>
+        </div>
+    </div>
+    
+    <!-- appel -->
+    <div class="min-w-[250px] bg-gradient-to-br from-indigo-500 to-purple-500 text-white rounded-lg flex flex-col items-center justify-center shadow-lg cursor-pointer">
+      <h3 class="text-lg font-bold mb-2">Créez le vôtre</h3>
+      <p class="text-sm mb-4">Votre projet mérite d'être en ligne.</p>
+      <button class="bg-white text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100"><a href="contact.php">Contactez-nous</a></button>
+    </div>
+  </div>
+</div>
+</section><br><br><br><br><br>
+<!-- section cv  -->
+  <section class="max-w-7xl mx-auto px-4 space-y-16 page-enter">
+<div>
+  <h2 class="text-2xl font-semibold mb-4">cv en ligne </h2>
+  <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-400">
     <!-- Projet exemple -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', ['img/cv61.png','img/cv62.png',])">
+        <img src="img/cv61.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
             <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
         </div>
     </div>
     <!-- Projet exemple -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', ['img/cv11.png','img/cv12.png',])">
+        <img src="img/cv11.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+        <div class="p-6">
+            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+        </div>
+    </div>
+      <!-- Projet exemple -->
+    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
+     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', ['img/cv21.png','img/cv22.png','img/cv23.png',])">
+        <img src="img/cv21.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+        <div class="p-6">
+            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+        </div>
+    </div>
+ 
+    <!-- Projet exemple -->
+    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
+     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', ['img/cv31.png','img/cv32.png',])">
+        <img src="img/cv31.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+        <div class="p-6">
+            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+        </div>
+    </div>
+    
+    <!-- Projet exemple -->
+    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
+     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', ['img/cv51.png','img/cv52.png',])">
+        <img src="img/cv51.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
             <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
         </div>
     </div>
     <!-- Projet exemple -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
-        <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
-        </div>
-    </div>
-    <!-- Projet exemple -->
-    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
-        <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
-        </div>
-    </div>
-    <!-- Projet exemple -->
-    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
-        <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
-        </div>
-    </div>
-    <!-- Projet exemple -->
-    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', ['img/cv4.png',])">
+        <img src="img/cv4.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
             <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
         </div>
@@ -265,57 +556,128 @@
   </div>
 </div>
 </section><br><br><br><br><br>
-<!-- section a copier  -->
+<!-- section a événementiel -->
  <section class="max-w-7xl mx-auto px-4 space-y-16 page-enter">
 <div>
-  <h2 class="text-2xl font-semibold mb-4">Un site événementiel</h2>
+  <h2 class="text-2xl font-semibold mb-4">Site événementiel</h2>
   <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-400">
-    <!-- Projet exemple -->
+    <!-- Projet nova -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+      onclick="openModal('🌐 NOVA Festival – L’expérience musicale ultime', `
+      <div class='space-y-6 text-gray-700'>
+        <div>
+          <h4 class='text-lg font-semibold text-purple-500 mb-1'>💡 Utilité</h4>
+          <p class='leading-relaxed'><strong>NOVA Festival</strong> est un site web immersif dédié à la promotion et à la billetterie d’un grand festival de musique électronique et alternative. Il permet de découvrir les artistes, le programme, les tarifs des pass et d’obtenir toutes les informations pratiques pour participer à l’événement.</p>
+        </div>
+
+        <div>
+          <h4 class='text-lg font-semibold text-purple-500 mb-1'>🎵 Présentation générale</h4>
+          <p class='leading-relaxed'>Le site propose une <strong>expérience visuelle vibrante</strong>, combinant animations et design sombre rehaussé de teintes violettes dynamiques.  Pensé pour un public jeune et connecté, il offre une navigation fluide et captivante — de la section “Artistes” à la “Billetterie”, tout est pensé pour <span class='text-purple-600 font-medium'>susciter l’envie de participer</span>.</p>
+        </div>
+
+        <div>
+          <h4 class='text-lg font-semibold text-purple-500 mb-1'>⚙️ Technologies et techniques utilisées</h4>
+            <ul class='list-disc list-inside space-y-1'>
+              <li><strong>HTML5 / Tailwind CSS / JavaScript ES6</strong> pour la structure et les animations.</li>
+              <li><strong>AOS (Animate On Scroll)</strong> pour les effets d’apparition fluides.</li>
+              <li><strong>Vanta.js (Globe)</strong> pour l’effet d’arrière-plan 3D immersif.</li>
+              <li><strong>Feather Icons</strong> pour des icônes légères et cohérentes.</li>
+              <li><strong>Responsive design</strong> optimisé pour tout type d’écran.</li>
+              <li><strong>FAQ interactive</strong> et <strong>smooth scrolling</strong> pour une navigation fluide.</li>
+            </ul>
+        </div>
+
+        <div>
+          <h4 class='text-lg font-semibold text-purple-500 mb-1'>🚀 Fonctionnalités principales</h4>
+          <ul class='list-disc list-inside space-y-1'>
+            <li>Présentation dynamique des <strong>artistes</strong> et de leurs horaires.</li>
+            <li>Affichage du <strong>programme complet</strong> par jour et scène.</li>
+            <li><strong>Billetterie interactive</strong> avec plusieurs formules (1 jour, 3 jours, VIP).</li>
+            <li><strong>FAQ animée</strong> pour une interaction fluide.</li>
+            <li>Formulaire de <strong>newsletter</strong> intégré.</li>
+            <li>Footer professionnel avec <strong>liens sociaux</strong>.</li>
+          </ul>
+        </div>
+
+        <div> 
+          <h4 class='text-lg font-semibold text-purple-500 mb-1'>✨ Éléments additionnels proposés</h4>
+          <ul class='list-disc list-inside space-y-1'>
+            <li>Ajout d’une <strong>carte interactive</strong> (Google Maps).</li>
+            <li>Intégration d’un <strong>système de paiement sécurisé</strong>.</li>
+            <li><strong>Réservation en temps réel</strong> avec QR code.</li>
+            <li>Création d’une page <strong>“Aftermovie”</strong> pour les éditions précédentes.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class='text-lg font-semibold text-purple-500 mb-1'>🖋️ En résumé</h4>
+            <p class='leading-relaxed'><strong>NOVA Festival</strong> est une vitrine événementielle moderne alliant <span class='text-purple-600 font-medium'>créativité, interactivité et performance</span>. Ce projet démontre la capacité à concevoir une plateforme complète pour une expérience musicale mémorable.</p>    
+        </div>
+      </div>
+        `, ['img/nava1.png','img/nava2.png','img/nava3.png','img/nava4.png','img/nava5.png','img/nava6.png'])">
+
+        <img src="img/nava1.png" alt="NOVA Festival – L’expérience musicale ultime" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+            <h3 class="font-medium text-lg">NOVA Festival – <br> L’expérience musicale ultime</h3>
         </div>
     </div>
-    <!-- Projet exemple -->
+      <!-- Projet aniv -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+    onclick="openModal('🌐 PartyPulse – Anniversaire Mémorable', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>PartyPulse</strong> est un site web événementiel conçu pour célébrer les anniversaires de manière moderne et interactive. Il permet de présenter la soirée, son programme et d’inviter les proches à confirmer leur présence via un formulaire élégant et intuitif.</p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li><strong>HTML5 / Tailwind CSS / JavaScript ES6</strong> pour la structure et l’interactivité.</li>
+      <li><strong>Vanta.js</strong> pour l’effet 3D animé de la page d’accueil.</li>
+      <li><strong>Feather Icons</strong> pour des icônes légères et élégantes.</li>
+      <li><strong>Responsive design</strong> assurant un affichage parfait sur tout écran.</li>
+      <li><strong>Formulaire RSVP</strong> avec validation dynamique et options multiples.</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'><strong>PartyPulse</strong> est un projet qui illustre la maîtrise du design moderne, de l’animation web et de la fluidité d’expérience utilisateur. Idéal pour tout événement festif souhaitant marquer les esprits par un site à la fois <span class='text-indigo-600 font-medium'>immersif, esthétique et fonctionnel</span>.</p>
+  </div>
+</div>
+`, ['img/anv1.png','img/anv2.png','img/anv3.png','img/anv4.png','img/anv5.png'])">
+        <img src="img/anv1.png" alt="PartyPulse – Anniversaire Mémorable" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+            <h3 class="font-medium text-lg">PartyPulse – <br> Anniversaire Mémorable</h3>
         </div>
     </div>
-    <!-- Projet exemple -->
+ 
+    <!-- Projet sem -->
     <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
+        onclick="openModal('🌐 Summit Abidjan – Événement Professionnel', `
+<div class='space-y-6 text-gray-700'>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>💡 À propos du site</h4>
+    <p class='leading-relaxed'><strong>Summit Abidjan</strong> est une landing page événementielle moderne, conçue pour un séminaire professionnel à Abidjan. Le site permet de présenter clairement le thème (conférences, ateliers, networking), le programme détaillé avec une ligne temporelle visuelle, et les différents intervenants.Il a pour but de capter l'attention des décideurs et entrepreneurs et de guider vers l'inscription rapide via un formulaire dédié </p>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>⚙️ Technologies & outils utilisés</h4>
+    <ul class='list-disc list-inside space-y-1'>
+      <li><strong>HTML5 / Tailwind CSS CDN / Custom CSS Variables</strong> pour une structure et un stylisme rapides et cohérents.</li>
+      <li><strong>GSAP (GreenSock) & ScrollTrigger</strong> pour animer l'apparition des sections (reveal class) au défilement, améliorant l'expérience utilisateur.</li>
+      <li><strong>SVG Dynamique</strong> pour le fond géométrique en hexagones de la section Hero, créé et géré en JavaScript.</li>
+      <li><strong>Structure de grille (Grid Layout)</strong> pour la billetterie et la section programme, assurant une bonne lisibilité multi-appareils.</li>
+      <li><strong>Formulaire de Réservation (RSVP)</strong> intégrant différentes options de billets et une validation côté client simulée en JS.</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class='text-lg font-semibold text-indigo-500 mb-1'>🖋️ Résumé</h4>
+    <p class='leading-relaxed'>Ce projet est un excellent exemple de *landing page* optimisée pour la conversion événementielle. Il démontre une maîtrise des techniques modernes de <span class='text-indigo-600 font-medium'>Web Performance et d'Animation</span>(via GSAP) pour créer une plateforme professionnelle, claire et engageante, essentielle pour la crédibilité d'un événement de cette envergure.</p>
+  </div>
+</div>
+`, ['img/sem1.png','img/sem2.png','img/sem4.png','img/sem4.png',])">
+        <img src="img/sem1.png" alt="Summit Abidjan – Événement Professionnel" class="rounded-t-lg h-64 w-full object-cover">
         <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
-        </div>
-    </div>
-    <!-- Projet exemple -->
-    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
-        <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
-        </div>
-    </div>
-    <!-- Projet exemple -->
-    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
-        <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
-        </div>
-    </div>
-    <!-- Projet exemple -->
-    <div class="min-w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer" 
-     onclick="openModal('Le petit café', 'Site pour un café / restaurant. . Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée  Caracthéristique : Présentation des lieu , Menu , Horaires , contact et carte google Maps intégrée', 'le petit café.png')">
-        <img src="le petit café.png" alt="Site Vitrine le petit café" class="rounded-t-lg h-64 w-full object-cover">
-        <div class="p-6">
-            <h3 class="font-medium text-lg">Le petit café <br> Site pour un café / restaurant</h3>
+            <h3 class="font-medium text-lg">Summit Abidjan – <br> Événement Professionnel</h3>
         </div>
     </div>
     
@@ -327,78 +689,56 @@
     </div>
   </div>
 </div>
-</section><br><br>
-<!-- section a copier  -->
- 
+</section><br><br><br><br><br>
 
-<!-- MODAL AMÉLIORÉE -->
-<!-- MODAL FULLSCREEN AVANCÉE -->
-<!-- MODAL FULLSCREEN AMÉLIORÉE -->
-<div id="projectModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-6">
-  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-6xl h-[90vh] flex overflow-hidden relative animate-fadeIn">
-    
-    <!-- Bouton fermeture -->
-    <button onclick="closeModal()" 
-      class="absolute top-4 right-4 bg-red-500/80 hover:bg-red-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg transition">
-      ✕
-    </button>
-    
-    <!-- Partie gauche : Slider -->
-    <div class="w-1/2 bg-gray-100 relative flex flex-col">
-      <!-- Image principale -->
-      <div class="flex-1 flex items-start justify-center overflow-hidden relative">
-        <img id="modalImage" src="" alt="Projet" 
-             class="object-contain max-h-[70%] mt-4 transition-opacity duration-500 opacity-0" />
+
+<!-- MODAL  -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-70 p-4"
+       onclick="if(event.target.id === 'projectModal'){ closeModal(); }">
+    <div class="relative w-full max-w-3xl bg-white rounded-xl shadow-lg overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <!-- Bouton Fermer -->
+      <button onclick="closeModal()" 
+              class="absolute top-3 right-3 text-gray-600 hover:text-red-500 text-2xl font-bold z-50">
+        &times;
+      </button>
+
+      <!-- Contenu modal -->
+      <div class="flex-1 overflow-y-auto p-4 flex flex-col space-y-4">
         
-        <!-- Boutons slider -->
-        <button onclick="prevImage()" 
-          class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 p-2 rounded-full shadow">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button onclick="nextImage()" 
-          class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 p-2 rounded-full shadow">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
-      
-      <!-- Miniatures -->
-      <div id="thumbnails" class="flex gap-2 p-3 overflow-x-auto bg-gray-200">
-        <!-- Miniatures générées dynamiquement -->
-      </div>
-    </div>
-    
-    <!-- Partie droite : Infos -->
-    <div class="w-1/2 p-8 flex flex-col overflow-y-auto">
-      <h3 id="modalTitle" class="text-2xl font-bold mb-4"></h3>
-      <p id="modalDescription" class="text-gray-600 mb-6"></p>
-      
-      <!-- Caractéristiques techniques -->
-      <div class="mb-6">
-        <h4 class="font-semibold mb-2">Technologies utilisées</h4>
-        <ul id="modalTech" class="list-disc list-inside text-sm text-gray-500 space-y-1">
-          <li>HTML5, CSS3, JavaScript</li>
-          <li>SEO optimisé</li>
-          <li>Responsive design</li>
-        </ul>
-      </div>
-      
-      <!-- Appels à l’action -->
-      <div class="flex flex-wrap gap-4 mt-auto">
-        <a id="modalSiteLink" href="#" target="_blank" class="bg-indigo-600 text-white px-5 py-3 rounded-lg shadow hover:bg-indigo-700">🌐 Voir le site</a>
-        <a href="contact.php" class="bg-purple-600 text-white px-5 py-3 rounded-lg shadow hover:bg-purple-700">📩 Demander un devis</a>
-        <button onclick="alert('Fonction partager à implémenter')" class="bg-gray-200 text-gray-700 px-5 py-3 rounded-lg shadow hover:bg-gray-300">🔗 Partager</button>
+        <!-- Image principale -->
+        <div class="relative flex justify-center items-center">
+          <button onclick="prevImage()" 
+                  class="absolute left-2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80">
+            &#10094;
+          </button>
+          
+          <img id="modalImage" src="" alt="Aperçu projet" 
+               class="w-full max-h-[50vh] object-contain rounded-lg transition duration-300 opacity-0" />
+          
+          <button onclick="nextImage()" 
+                  class="absolute right-2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80">
+            &#10095;
+          </button>
+        </div>
+
+        <!-- Thumbnails -->
+        <div id="thumbnails" class="flex flex-wrap justify-center gap-2"></div>
+
+        <!-- Texte -->
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h2 id="modalTitle" class="text-xl sm:text-2xl font-bold mb-2 text-center"></h2>
+          <p id="modalDescription" class="text-gray-700 text-sm sm:text-base text-center leading-relaxed"></p>
+        </div>
+        <div class="flex flex-wrap gap-4 mt-auto">
+           <a href="contact.php" class="bg-purple-600 text-white px-5 py-3 rounded-lg shadow hover:bg-purple-700">📩 Demander un devis</a>
+        
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<style>
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-.animate-fadeIn { animation: fadeIn 0.3s ease-out; }
-</style>
+
 
 
 
@@ -461,131 +801,70 @@
       <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="text-slate-400">© 2025 Elpton. Tous droits réservés.</p>
         <div class="flex items-center gap-5" aria-label="Réseaux sociaux">
-          <a href="https://www.facebook.com/profile.php?id=61578419139752" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          
-          <a href="#" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/2250712976635" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61578419139752" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>          
+          <a href="#" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/2250554276459" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
 <!-- SCRIPT JS -->
-<script>
-document.getElementById('mobile-menu-button').addEventListener('click', function() {
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
   const menu = document.getElementById('mobile-menu');
   menu.classList.toggle('hidden');
 });
 
-function openModal(title, description, imageUrl, siteUrl="#") {
-  document.getElementById('modalTitle').innerText = title;
-  document.getElementById('modalDescription').innerText = description;
-  document.getElementById('modalImage').src = imageUrl;
-  document.getElementById('modalSiteLink').href = siteUrl;
-  const modal = document.getElementById('projectModal');
-  modal.classList.remove('hidden'); modal.classList.add('flex');
-}
+    let currentImages = [];
+    let currentIndex = 0;
+    let autoSlide;
 
-function closeModal() {
-  const modal = document.getElementById('projectModal');
-  modal.classList.add('hidden'); modal.classList.remove('flex');
-}
+    function openModal(title, description, images) {
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalDescription").innerHTML = description;  
+      currentImages = images;
+      currentIndex = 0;
+      updateModalImage();
+      document.getElementById("projectModal").classList.remove("hidden");
 
-// Smooth scrolling pour anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if(target){
-      window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+      // Lancer le slide auto
+      autoSlide = setInterval(nextImage, 5000);
     }
-  });
-});
 
-// Animation des sections à l'entrée
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('.page-enter');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('page-enter-active'); } });
-  }, { threshold:0.1 });
-  sections.forEach(section => observer.observe(section));
-});
+    function updateModalImage() {
+      const modalImage = document.getElementById("modalImage");
+      modalImage.src = currentImages[currentIndex];
+      modalImage.classList.remove("opacity-0");
+      
+      // Miniatures
+      const thumbs = document.getElementById("thumbnails");
+      thumbs.innerHTML = "";
+      currentImages.forEach((img, i) => {
+        const thumb = document.createElement("img");
+        thumb.src = img;
+        thumb.className = "w-16 h-16 object-cover rounded cursor-pointer " + 
+                         (i === currentIndex ? "ring-2 ring-indigo-500" : "");
+        thumb.onclick = () => { currentIndex = i; updateModalImage(); };
+        thumbs.appendChild(thumb);
+      });
+    }
 
-// les we pour la modaleammeliore 
-let currentIndex = 0;
-let images = [];
-let autoSlide;
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      updateModalImage();
+    }
 
-function openModal(title, description, imageList, siteUrl="#") {
-  document.getElementById('modalTitle').innerText = title;
-  document.getElementById('modalDescription').innerText = description;
-  document.getElementById('modalSiteLink').href = siteUrl;
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      updateModalImage();
+    }
 
-  images = Array.isArray(imageList) ? imageList : [imageList];
-  currentIndex = 0;
-  
-  updateImage();
-
-  // Générer miniatures
-  const thumbs = document.getElementById('thumbnails');
-  thumbs.innerHTML = "";
-  images.forEach((img, i) => {
-    const thumb = document.createElement("img");
-    thumb.src = img;
-    thumb.className = "h-16 w-24 object-cover rounded cursor-pointer border-2 " 
-      + (i===0 ? "border-indigo-500" : "border-transparent");
-    thumb.onclick = () => { currentIndex = i; updateImage(); };
-    thumbs.appendChild(thumb);
-  });
-
-  const modal = document.getElementById('projectModal');
-  modal.classList.remove('hidden'); 
-  modal.classList.add('flex');
-
-  // Lancer auto défilement
-  autoSlide = setInterval(nextImage, 4000);
-}
-
-function closeModal() {
-  const modal = document.getElementById('projectModal');
-  modal.classList.add('hidden'); 
-  modal.classList.remove('flex');
-  clearInterval(autoSlide);
-}
-
-function updateImage() {
-  const img = document.getElementById('modalImage');
-  img.classList.add("opacity-0");
-  setTimeout(() => {
-    img.src = images[currentIndex];
-    img.onload = () => img.classList.remove("opacity-0");
-  }, 200);
-
-  // mettre en surbrillance la miniature active
-  const thumbs = document.querySelectorAll("#thumbnails img");
-  thumbs.forEach((t, i) => {
-    t.classList.toggle("border-indigo-500", i===currentIndex);
-    t.classList.toggle("border-transparent", i!==currentIndex);
-  });
-}
-
-function nextImage() {
-  if(images.length > 1) {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateImage();
-  }
-}
-
-function prevImage() {
-  if(images.length > 1) {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateImage();
-  }
-}
-
-
-
-</script>
+    function closeModal() {
+      document.getElementById("projectModal").classList.add("hidden");
+      clearInterval(autoSlide);
+    }
+  </script>
 
 </body>
 </html>

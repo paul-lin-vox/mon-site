@@ -25,16 +25,16 @@
     "@type": "Organization",
     "name": "Elpton",
     "url": "https://www.elpton.com/",
-    "logo": "https://www.elpton.com/favicon.png",
+    "logo": "https://www.elpton.com/img/Elptonfav.jpg",
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61578419139752",
-      "https://wa.me/2250712976635"
+      "https://wa.me/2250554276459"
     ],
     "contactPoint": [{
       "@type": "ContactPoint",
       "contactType": "customer support",
       "email": "contact@elpton.com",
-      "telephone": "+225712976635",
+      "telephone": "+2250554276459",
       "areaServed": "Côte d'Ivoire"
     }]
   }
@@ -289,7 +289,7 @@
         const texteEncode = encodeURIComponent(texteMessage);
         
         // Numéro de téléphone cible
-        const numeroTelephone = '2250712976635'; 
+        const numeroTelephone = '22554276459'; 
 
         // Création de l'URL WhatsApp
         const urlWhatsApp = `https://wa.me/${numeroTelephone}?text=${texteEncode}`;
@@ -310,9 +310,14 @@
                         <i class="fas fa-envelope text-blue-600"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-gray-900 mb-1">Email</h4>
-                        <p class="text-gray-600"><li><a href="mailto:contact@elpton.com" class="text-slate-300 hover:text-white">contact@elpton.com</a></li></p>
+                      <h4 class="font-bold text-gray-900 mb-1">Email</h4>
+                      <ul class="list-none">
+                        <li>
+                          <a href="mailto:contact@elpton.com" class="text-black hover:text-gray-700">contact@elpton.com</a>
+                        </li>
+                      </ul>
                     </div>
+
                 </div>
                 <div class="flex items-start">
                     <div class="flex-shrink-0 bg-green-100 p-3 rounded-lg mr-4">
@@ -324,14 +329,13 @@
                     </div>
                 </div>
                 <div class="flex space-x-4">
-                    <a href="https://www.facebook.com/profile.php?id=61578419139752" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300">
+                    <a href="https://www.facebook.com/profile.php?id=61578419139752"  target="_blank" rel="noopener"  class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300">
                         <i class="fab fa-facebook-f"></i>
-                    </a>
-                                    
-                    <a href="#" class="bg-blue-800 text-white p-3 rounded-full hover:bg-blue-900 transition duration-300">
+                    </a>                                    
+                    <a href="#" target="_blank" rel="noopener" class="bg-blue-800 text-white p-3 rounded-full hover:bg-blue-900 transition duration-300">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://wa.me/2250712976635" target="_blank" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition duration-300">
+                    <a href="https://wa.me/2250554276459" target="_blank" rel="noopener" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition duration-300">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -384,13 +388,13 @@
         <div class="flex items-center gap-5" aria-label="Réseaux sociaux">
           <a href="https://www.facebook.com/profile.php?id=61578419139752" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
          
-          <a href="#" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/2250712976635" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/2250554276459" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
   </footer>
-1
+
     <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {

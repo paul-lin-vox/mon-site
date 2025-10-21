@@ -4,18 +4,18 @@
   <!-- ==================== BASE / SEO ==================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- TITLE + META -->
-  <title>Services web Elpton — Création de sites, e-commerce, SEO & maintenance</title>
+  <title>Services web Elpton - Création de sites, e-commerce, SEO & maintenance</title>
   <meta name="description" content="Découvrez les services Elpton : création de sites vitrines, boutiques en ligne, SEO, maintenance et automatisation en Côte d’Ivoire. Des solutions modernes et performantes adaptées à vos besoins." />
   <meta name="keywords" content="services web, création de site vitrine, boutique en ligne, SEO, maintenance site, intégration paiement, automatisation, Elpton, Abidjan" />
-  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="icon" href="img/Elptonfav.jpg" type="image/png" />
 
   <!-- CANONICAL -->
   <link rel="canonical" href="https://www.elpton.com/services" />
 
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Nos Services — Elpton" />
+  <meta property="og:title" content="Nos Services - Elpton" />
   <meta property="og:description" content="Création de sites web modernes, SEO, maintenance, boutiques en ligne et automatisation. Découvrez nos services digitaux sur mesure." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1600&auto=format&fit=crop" />
@@ -32,10 +32,10 @@
       "@type": "Organization",
       "name": "Elpton",
       "url": "https://www.elpton.com/services",
-      "logo": "https://www.elpton.com/favicon.png",
+      "logo": "https://www.elpton.com/img/Elptonfav.jpg",
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61578419139752",
-        "https://wa.me/2250712976635"
+        "https://wa.me/2250554276459"
       ]
     },
     "areaServed": {
@@ -63,7 +63,7 @@
       --bg:#f8fafc;
     }
     html{scroll-behavior:smooth}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"; margin:0; background:var(--bg); color:var(--ink)}
 
     .gradient-text{background:linear-gradient(90deg,var(--brand-1),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
     .card-hover{transition:transform .3s ease, box-shadow .3s ease}
@@ -77,6 +77,110 @@
     .parallax .layer{position:absolute;inset:auto;pointer-events:none;will-change:transform}
     @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
     .floating{animation:float 6s ease-in-out infinite}
+
+    .popup-overlay{
+      display:none;
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(1, 39, 255, 0.45);
+      justify-content:center;
+      align-items:center;
+      z-index: 9999;
+      padding: 24px;
+      backdrop-filter: blur(4px);
+    }
+    .popup-box{
+      background: linear-gradient(135deg, #0a6bcc, #8b5cf6);
+      border-radius: 20px;
+      display: flex;
+      max-width: 980px;
+      width: 100%;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
+      animation: fadeIn 0.36s ease;
+      position: relative;
+    }
+    .popup-image{
+      width: 100%;
+      height: auto;
+      padding: 30px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .popup-image .placeholder{
+      width: 100%;
+      max-height: 380px;
+      background: #dbeafe;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .popup-image img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .popup-content{
+      flex: 1.2;
+      padding: 35px;
+      text-align: left;
+      background: transparent;
+      color: #000;
+    }
+    .popup-content h2{
+      background: #002fff;
+      color: #ffffff;
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 10px;
+    }
+    .popup-content p{
+      color: #000000;
+      line-height: 1.6;
+      margin: 8px 0;
+      font-size: 15.5px;
+    }
+    .popup-btn{
+      display: inline-block;
+      background: #0078ff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 12px;
+    }
+    .popup-btn:hover{ background: #003fde; }
+    .close-btn{
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: #f5f5f5;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .close-btn:hover{ background:#eee; }
+
+    @keyframes fadeIn { from { transform: scale(.98); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+
+    @media (max-width:900px){
+      .popup-box{ flex-direction: column; }
+      .popup-image{ padding: 18px; }
+      .popup-content{ padding: 18px; }
+      .popup-image .placeholder{ max-height: 260px; }
+    }
   </style>
 </head>
 
@@ -97,7 +201,13 @@
             <i class="fa-solid fa-paper-plane"></i> Contact
           </a>
         </div>
-        <button id="mobile-menu-button" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-600 hover:bg-slate-50" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+        <button
+          id="mobile-menu-button"
+          class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-600 hover:bg-slate-50"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Ouvrir le menu"
+        >
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -114,172 +224,156 @@
     </div>
   </nav>
 
-<!-- HERO / TITRE -->
-<section class="relative bg-gradient-to-r from-indigo-50 to-white py-24 overflow-hidden">
-  <!-- Décorations légères -->
-  <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-30 animate-[float_6s_ease-in-out_infinite]"></div>
-  <div class="absolute bottom-0 right-0 w-48 h-48 bg-purple-200 rounded-full opacity-20 animate-[float_8s_ease-in-out_infinite]"></div>
+  <!-- HERO / TITRE -->
+  <section class="relative bg-gradient-to-r from-indigo-50 to-white py-24 overflow-hidden">
+    <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-30 animate-[float_6s_ease-in-out_infinite]"></div>
+    <div class="absolute bottom-0 right-0 w-48 h-48 bg-purple-200 rounded-full opacity-20 animate-[float_8s_ease-in-out_infinite]"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <p class="text-sm text-indigo-600 font-semibold mb-2">Bienvenue chez</p>
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-      El<span class="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">pton</span>
-    </h1>
-    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-      Découvrez nos services de développement web sur mesure : sites vitrines, e-commerce, maintenance, SEO et bien plus encore.
-    </p>
-  </div>
-</section>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm text-indigo-600 font-semibold mb-2">Bienvenue chez</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        El<span class="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">pton</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+        Découvrez nos services de développement web sur mesure : sites vitrines, e-commerce, maintenance, SEO et bien plus encore.
+      </p>
+    </div>
+  </section>
 
+  <!-- Services Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 page-enter">
 
-<!-- Services Section -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 page-enter">
-  
-  <!-- HEBERGEMENT -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
-    <div class="h-48 overflow-hidden mb-4">
-      <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1374&q=80" alt="HEBERGEMENT" class="w-full h-full object-cover rounded-lg">
+    <!-- HEBERGEMENT -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+      <div class="h-48 overflow-hidden mb-4">
+        <img src="img/heber.jpg" alt="HEBERGEMENT" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <h3 class="text-xl font-bold mb-2">HÉBERGEMENT WEB</h3>
+      <p class="text-gray-600 mb-4">Profitez d’un hébergement web fiable, sécurisé et parfaitement adapté à vos besoins, sans vous soucier des aspects techniques.</p>
+      <div class="flex items-center gap-3">
+        <button onclick="openPopup('popup1')" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md">En savoir plus</button>
+      </div>
     </div>
-    <h3 class="text-xl font-bold mb-2">HEBERGEMENT</h3>
-    <p class="text-gray-600 mb-4">Solutions d’hébergement fiables et rapides pour vos sites web. Offrez une présence en ligne sécurisée et performante.</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Hébergement sécurisé</span>
-      <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Performance optimale</span>
-      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Actualisation du site</span>
-    </div>
-  </div>
 
-  <!-- SITE VITRINE -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
-    <div class="h-48 overflow-hidden mb-4">
-      <img src="https://images.unsplash.com/photo-1467232004584-a241de8b3885?auto=format&fit=crop&w=1469&q=80" alt="SITE VITRINE" class="w-full h-full object-cover rounded-lg">
+    <!-- - Création de site web -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+      <div class="h-48 overflow-hidden mb-4">
+        <img src="img/web.jpg" alt="SITE WEB" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <h3 class="text-xl font-bold mb-2">CRÉATION DE SITE WEB</h3>
+      <p class="text-gray-600 mb-4">Offrez à votre activité une <strong>vitrine digitale</strong> moderne, intuitive et optimisée grâce à nos solutions web sur mesure intégrant l’intelligence artificielle notre expertise.</p>
+      <div class="flex items-center gap-3">
+        <button onclick="openPopup('popup2')" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md">En savoir plus</button>
+      </div>
     </div>
-    <h3 class="text-xl font-bold mb-2">SITE VITRINE</h3>
-    <p class="text-gray-600 mb-4">Sites vitrines modernes et attractifs pour présenter votre activité et valoriser l’image de votre entreprise.</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Design attractif</span>
-      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Navigation intuitive</span>
-      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Responsive design</span>
-    </div>
-  </div>
+    
 
-  <!-- CV EN LIGNE -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
-    <div class="h-48 overflow-hidden mb-4">
-      <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1436&q=80" alt="CV EN LIGNE" class="w-full h-full object-cover rounded-lg">
+    <!-- CV EN LIGNE -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">      
+        <div class="h-48 overflow-hidden mb-4">
+        <img src="img/cv.jpg" alt="CV EN LIGNE" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <h3 class="text-xl font-bold mb-2">CV ET LETTRES DE MOTIVATION</h3>
+      <p class="text-gray-600 mb-4">Valorisez votre parcours avec des CV et lettres de motivation professionnels, adaptés à vos objectifs et aux attentes du marché.</p>
+      <div class="flex items-center gap-3">
+        <button onclick="openPopup('popup3')" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md">En savoir plus </button>
+      </div>
     </div>
-    <h3 class="text-xl font-bold mb-2">CV EN LIGNE</h3>
-    <p class="text-gray-600 mb-4">CV en ligne personnalisés et modernes pour mettre en avant vos compétences partout et sur tous les appareils.</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Design personnalisé</span>
-      <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Accessibilité partout</span>
-      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Optimisation professionnelle</span>
-    </div>
-  </div>
 
-  <!-- AUTOMATISATION D'ENTREPRISE -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
-    <div class="h-48 overflow-hidden mb-4">
-      <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1436&q=80" alt="AUTOMATISATION D'ENTREPRISE" class="w-full h-full object-cover rounded-lg">
+    <!-- AUTOMATISATION D'ENTREPRISE -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+      <div class="h-48 overflow-hidden mb-4">
+        <img src="img/aut.jpg" alt="AUTOMATISATION D'ENTREPRISE" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <h3 class="text-xl font-bold mb-2">AUTOMATISATION </h3>
+      <p class="text-gray-600 mb-4">Optimisez votre quotidien avec des automatisations sur mesure qui simplifient vos tâches et fluidifient votre activité.</p>
+      <div class="flex items-center gap-3">
+        <button onclick="openPopup('popup4')" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md">En savoir plus</button>
+      </div>
     </div>
-    <h3 class="text-xl font-bold mb-2">AUTOMATISATION D'ENTREPRISE</h3>
-    <p class="text-gray-600 mb-4">Automatisation de vos processus pour gagner du temps et réduire les erreurs, avec des solutions sur mesure pour votre productivité.</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Analyse des processus</span>
-      <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Outils sur mesure</span>
-      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Intégration fluide</span>
-    </div>
-  </div>
 
-  <!-- MAINTENANCE DE SITE -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
-    <div class="h-48 overflow-hidden mb-4">
-      <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1374&q=80" alt="MAINTENANCE DE SITE" class="w-full h-full object-cover rounded-lg">
-    </div>
-    <h3 class="text-xl font-bold mb-2">MAINTENANCE DE SITE</h3>
-    <p class="text-gray-600 mb-4">Assurance d’un site toujours à jour, rapide et sécurisé grâce à une maintenance complète et professionnelle.</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Sécurité garantie</span>
-      <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Performance optimale</span>
-      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Support régulier</span>
-    </div>
-  </div>
-
-  <!-- OPTIMISATION SEO -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
-    <div class="h-48 overflow-hidden mb-4">
-      <img src="https://images.unsplash.com/photo-1581091215360-6ba1c9129f5c?auto=format&fit=crop&w=1374&q=80" alt="OPTIMISATION SEO" class="w-full h-full object-cover rounded-lg">
-    </div>
-    <h3 class="text-xl font-bold mb-2">OPTIMISATION SEO</h3>
-    <p class="text-gray-600 mb-4">Optimisation de votre contenu pour les moteurs de recherche afin d’améliorer votre visibilité et votre trafic organique.</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Référencement naturel</span>
-      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Optimisation du contenu</span>
-      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Netlinking</span>
-    </div>
-  </div>
-
-  <!-- MARKETING DIGITAL -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
-    <div class="h-48 overflow-hidden mb-4">
-      <img src="https://images.unsplash.com/photo-1581090700227-2a7b0c203e34?auto=format&fit=crop&w=1374&q=80" alt="MARKETING DIGITAL" class="w-full h-full object-cover rounded-lg">
-    </div>
-    <h3 class="text-xl font-bold mb-2">MARKETING DIGITAL</h3>
-    <p class="text-gray-600 mb-4">Campagnes Google Ads, réseaux sociaux, e-mail marketing et reporting pour booster votre visibilité et vos conversions.</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Google Ads</span>
-      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Social Media</span>
-      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Email Marketing</span>
-    </div>
-  </div>
-
-  <!-- SUPPORT & AUTOMATISATION -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
-    <div class="h-48 overflow-hidden mb-4">
-      <img src="https://images.unsplash.com/photo-1581090700227-2a7b0c203e34?auto=format&fit=crop&w=1374&q=80" alt="SUPPORT & AUTOMATISATION" class="w-full h-full object-cover rounded-lg">
-    </div>
-    <h3 class="text-xl font-bold mb-2">SUPPORT & AUTOMATISATION</h3>
-    <p class="text-gray-600 mb-4">Mise en place de systèmes automatisés et support continu pour simplifier la gestion de vos processus.</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Formulaires interactifs</span>
-      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Systèmes d'automatisation</span>
-      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Support continu</span>
-    </div>
-  </div>
-    <!-- SUPPORT & AUTOMATISATION -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
-    <div class="h-48 overflow-hidden mb-4">
-      <img src="https://images.unsplash.com/photo-1581090700227-2a7b0c203e34?auto=format&fit=crop&w=1374&q=80" alt="SUPPORT & AUTOMATISATION" class="w-full h-full object-cover rounded-lg">
-    </div>
-    <h3 class="text-xl font-bold mb-2">SUPPORT & AUTOMATISATION</h3>
-    <p class="text-gray-600 mb-4">Mise en place de systèmes automatisés et support continu pour simplifier la gestion de vos processus.</p>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Formulaires interactifs</span>
-      <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Systèmes d'automatisation</span>
-      <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Support continu</span>
-    </div>
-  </div>
-
-</section>
+    <!-- APPEL À L’ACTION (carte spéciale sans modal) -->
+    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl shadow-lg card-hover p-6 flex flex-col justify-between">
+        <div>
+            <h3 class="text-2xl font-bold mb-3">🚀 Prêt à démarrer votre projet ?</h3>
+            <p class="mb-4 text-indigo-100">Contactez-nous dès aujourd’hui pour transformer vos idées en un site web moderne et performant.</p>
+        </div>
+        <div class="mt-4">
+            <a href="contact.php" class="inline-flex items-center gap-2 bg-white text-indigo-600 px-5 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition">
+            <i class="fa-solid fa-paper-plane"></i> Contactez-nous
+            </a>
+        </div>
+    </div> 
 
 
-<!-- APPEL À L’ACTION FINAL -->
-<section class="bg-indigo-600 text-white py-20 mt-16 rounded-lg relative overflow-hidden">
-    <!-- Bulles animées dans le CTA -->
+    <!-- MAINTENANCE DE SITE -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+      <div class="h-48 overflow-hidden mb-4">
+        <img src="img/mai.jpg" alt="MAINTENANCE DE SITE" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <h3 class="text-xl font-bold mb-2">MAINTENANCE DE SITE</h3>
+      <p class="text-gray-600 mb-4">Assurez la fiabilité de votre site avec un service de maintenance complet, pensé pour la performance, la sécurité et l’évolution continue.</p><br><br>
+      <div class="flex items-center gap-3">
+        <button onclick="openPopup('popup5')" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md">En savoir plus</button>
+      </div>
+    </div>
+
+    <!-- OPTIMISATION SEO -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+      <div class="h-48 overflow-hidden mb-4">
+        <img src="img/seo.jpg" alt="OPTIMISATION SEO" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <h3 class="text-xl font-bold mb-2">OPTIMISATION SEO</h3>
+      <p class="text-gray-600 mb-4">Boostez votre visibilité en ligne grâce à une optimisation SEO ciblée et durable.</p><br><br>
+      <div class="flex items-center gap-3">
+        <button onclick="openPopup('popup6')" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md">En savoir plus</button>
+      </div>
+    </div>
+
+    <!-- refonte de site web -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+      <div class="h-48 overflow-hidden mb-4">
+        <img src="img/ma.jpg" alt="refonte de site web" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <h3 class="text-xl font-bold mb-2">REFONTE DE SITE WEB</h3>
+      <p class="text-gray-600 mb-4">Modernisez votre présence en ligne avec une refonte sur mesure, pensée pour améliorer l’esthétique, la performance et l’expérience utilisateur de votre site.</p>
+      <div class="flex items-center gap-3">
+        <button onclick="openPopup('popup7')" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md">En savoir plus</button>
+      </div>
+    </div>
+
+    <!-- SUPPORT & AUTOMATISATION (1) -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover p-6">
+      <div class="h-48 overflow-hidden mb-4">
+        <img src="img/auto.jpg" alt="SUPPORT & AUTOMATISATION" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <h3 class="text-xl font-bold mb-2">SUPPORT TECHNIQUE</h3>
+      <p class="text-gray-600 mb-4">Bénéficiez d’un support technique réactif et clair pour rester serein face aux imprévus numériques.</p>
+      <div class="flex items-center gap-3">
+        <button onclick="openPopup('popup8')" class="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-1)] to-[var(--brand-2)] text-white px-4 py-2 rounded-md">En savoir plus</button>
+      </div>
+    </div>
+
+    
+
+  </section>
+
+  <!-- APPEL À L’ACTION FINAL -->
+  <section class="bg-indigo-600 text-white py-20 mt-16 rounded-lg relative overflow-hidden">
     <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-30 floating"></div>
     <div class="absolute bottom-0 right-0 w-48 h-48 bg-purple-200 rounded-full opacity-20 floating"></div>
 
     <div class="max-w-4xl mx-auto text-center relative z-10">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Prêt à donner vie à votre projet ?</h2>
-        <p class="text-lg mb-8">Chez <span class="font-semibold">Elpton</span>, nous transformons vos idées en sites web modernes et performants.</p>
-        <a href="contact.php" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition">
-            Contactez-nous maintenant
-        </a>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Prêt à donner vie à votre projet ?</h2>
+      <p class="text-lg mb-8">Chez <span class="font-semibold">Elpton</span>, nous transformons vos idées en sites web modernes et performants.</p>
+      <a href="contact.php" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition">
+        Contactez-nous maintenant
+      </a>
     </div>
-</section>
+  </section>
 
-<!-- Footer (identique) -->
-<footer class="bg-slate-900 text-white py-12">
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex flex-col md:flex-row justify-between gap-10">
         <div>
@@ -302,7 +396,9 @@
               <li><a href="services.html" class="text-gray-400 hover:text-white transition">Création de site</a></li>
               <li><a href="services.html" class="text-gray-400 hover:text-white transition">Référencement (SEO)</a></li>
               <li><a href="services.html" class="text-gray-400 hover:text-white transition">Maintenance</a></li>
-              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Automatisation & intégrations</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">Marketing digital</a></li><li><a href="services.html" class="text-gray-400 hover:text-white transition">HEBERGEMENT</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Automatisation & intégrations</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">Marketing digital</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-white transition">HEBERGEMENT</a></li>
               <li><a href="services.html" class="text-gray-400 hover:text-white transition">CV EN LIGNE</a></li>
             </ul>
           </div>
@@ -321,29 +417,183 @@
         <p class="text-slate-400">© 2025 Elpton. Tous droits réservés.</p>
         <div class="flex items-center gap-5" aria-label="Réseaux sociaux">
           <a href="https://www.facebook.com/profile.php?id=61578419139752" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-         
-          <a href="#" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/2250712976635" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/2250554276459" target="_blank" rel="noopener" class="text-slate-300 hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
-<script>
-document.getElementById("mobile-menu-button").addEventListener("click", function () {
-  document.getElementById("mobile-menu").classList.toggle("hidden");
-});
+  <!-- ==================== MODALES (identiques à service1.html) ==================== -->
 
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".page-enter");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) entry.target.classList.add("page-enter-active");
+  <!-- popup1 - Hébergement -->
+  <div class="popup-overlay" id="popup1">
+    <div class="popup-box">
+      <div class="popup-image"><div class="placeholder"><img src="img/heber.jpg" alt="HEBERGEMENT" ></div></div>
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup('popup1')">✖</button>
+        <h2>HÉBERGEMENT WEB</h2>
+        <p>Nous proposons des solutions d’hébergement fiables et adaptées à tous types de projets web, qu’il s’agisse de sites vitrines, boutiques en ligne ou plateformes dynamiques. Chaque site bénéficie d’une haute disponibilité, d’une sécurité renforcée et de performances optimisées pour une navigation fluide. 
+        Nos offres sont flexibles et évolutives, avec des ressources ajustables selon vos besoins. Nous prenons également en charge la gestion des noms de domaine, des certificats SSL, des sauvegardes automatiques et assurons un support technique réactif. <br>
+        Notre priorité : vous garantir un hébergement stable, sécurisé et parfaitement intégré à votre site, sans complexité technique.
+</p>
+        <a href="contact.php" class="popup-btn">📩 Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup2 - Site web -->
+  <div class="popup-overlay" id="popup2">
+    <div class="popup-box">
+      <div class="popup-image"><div class="placeholder"><img src="img/web.jpg" alt="site web" ></div></div>
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup('popup2')">✖</button>
+        <h2>CRÉATION DE SITE WEB</h2>
+        <p>Le Web sur Mesure pour <strong>vous</strong></p>
+        <p>Design sur-mesure, responsive et optimisé SEO.</p>
+        <p>Nous concevons des sites web performants, intuitifs et adaptés à tous les écrans grâce à une approche responsive et centrée sur l’expérience utilisateur. Notre expertise combine plusieurs méthodes de création : développement sur mesure (HTML/CSS/JavaScript) et solutions CMS (WordPress, Webflow…) , pour répondre précisément aux besoins de chaque projet.
+        Nous intégrons l’intelligence artificielle dans nos processus pour optimiser le design, automatiser certaines tâches et améliorer la pertinence des contenus. Chaque site est pensé pour être évolutif, sécurisé, rapide et facile à administrer. <br>
+        Notre objectif : vous offrir une présence en ligne professionnelle, efficace et parfaitement alignée avec votre image et vos objectifs.</p>
+        <a href="contact.php" class="popup-btn">📩 Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup3 - CV en ligne -->
+  <div class="popup-overlay" id="popup3">
+    <div class="popup-box">
+      <div class="popup-image"><div class="placeholder"><img src="img/cv.jpg" alt="CV EN LIGNE" ></div></div>
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup('popup3')">✖</button>
+        <h2>CV ET LETTRES DE MOTIVATION</h2>
+        <p>Nous accompagnons les candidats dans la création de CV et de lettres de motivation efficaces, personnalisés et adaptés à chaque objectif professionnel. Que ce soit pour une candidature spontanée, un poste ciblé ou une reconversion, chaque document est conçu pour mettre en valeur les compétences, le parcours et la personnalité du candidat.
+        Notre approche combine clarté, pertinence et stratégie, avec une mise en page soignée et un contenu optimisé pour capter l’attention des recruteurs. Nous proposons également des conseils pour adapter les documents à différents secteurs et formats numériques. <br>
+        Notre mission : vous aider à présenter votre profil de manière professionnelle, convaincante et alignée avec vos ambitions.</p>
+        <a href="contact.php" class="popup-btn">📩 Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup4 - Automatisation -->
+  <div class="popup-overlay" id="popup4">
+    <div class="popup-box">
+      <div class="popup-image"><div class="placeholder"><img src="img/aut.jpg" alt="AUTOMATISATION" ></div></div>
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup('popup4')">✖</button>
+        <h2>AUTOMATISATION</h2>
+        <p>Nous proposons des solutions d’automatisation pour simplifier les processus répétitifs et améliorer la productivité. Qu’il s’agisse de formulaires intelligents, de notifications automatiques, de synchronisation de données ou de génération de contenus, chaque automatisation est pensée pour s’intégrer naturellement à votre site ou votre environnement de travail.
+        Grâce à des outils adaptés et une configuration personnalisée, vous gagnez du temps, réduisez les erreurs humaines et offrez une expérience plus fluide à vos utilisateurs. Ce service convient aussi bien aux indépendants qu’aux entreprises souhaitant optimiser leur fonctionnement digital. <br>
+        Notre objectif : transformer vos tâches manuelles en processus intelligents, fiables et sans effort</p>
+        <a href="contact.php" class="popup-btn">📩 Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup5 - Maintenance -->
+  <div class="popup-overlay" id="popup5">
+    <div class="popup-box">
+      <div class="popup-image"><div class="placeholder"><img src="img/mai.jpg" alt="MAINTENANCE" ></div></div>
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup('popup5')">✖</button>
+        <h2>MAINTENANCE DE SITE</h2>
+        <p>Nous assurons la maintenance complète de votre site web pour garantir sa stabilité, sa sécurité et ses performances dans le temps. Qu’il s’agisse de mises à jour techniques, de corrections d’erreurs, d’optimisation de la vitesse ou d’ajouts de contenus, nous veillons à ce que votre site reste fonctionnel et agréable à utiliser.
+        Nos prestations incluent la surveillance régulière, les sauvegardes automatiques, la gestion des incidents et l’adaptation aux évolutions technologiques. <br>
+        Notre engagement : vous offrir un site toujours opérationnel, sécurisé et performant, sans vous soucier des aspects techniques.</p>
+        <a href="contact.php" class="popup-btn">📩 Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup6 - SEO -->
+  <div class="popup-overlay" id="popup6">
+    <div class="popup-box">
+      <div class="popup-image"><div class="placeholder"><img src="img/seo.jpg" alt="SEO" ></div></div>
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup('popup6')">✖</button>
+        <h2> OPTIMISATION SEO</h2>
+        <p>Nous améliorons la visibilité de votre site web sur les moteurs de recherche grâce à des techniques de référencement naturel adaptées à votre secteur et à vos objectifs. Notre approche inclut l’optimisation des contenus, la structure du site, les balises techniques, la vitesse de chargement et la compatibilité mobile.
+        Nous analysons les mots-clés pertinents, les performances actuelles et les opportunités de positionnement pour vous aider à atteindre un meilleur classement dans les résultats de recherche. Ce service contribue à attirer un trafic qualifié et à renforcer votre présence en ligne de manière durable. <br>
+        Notre priorité : faire en sorte que votre site soit trouvé facilement, compris par les moteurs de recherche et apprécié par vos visiteurs.
+</p>
+        <a href="contact.php" class="popup-btn">📩 Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup7 - REFONTE DE SITE WEB -->
+  <div class="popup-overlay" id="popup7">
+    <div class="popup-box">
+      <div class="popup-image"><div class="placeholder"><img src="img/ma.jpg" alt="REFONTE DE SITE WEB" ></div></div>
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup('popup7')">✖</button>
+        <h2>REFONTE DE SITE WEB</h2>
+        <p>Nous proposons un service de refonte web sur mesure, adapté aux évolutions de votre activité et aux attentes de vos visiteurs. Qu’il s’agisse d’un changement d’identité visuelle, d’une amélioration de l’ergonomie ou d’une optimisation des performances, nous repensons votre site pour le rendre plus moderne, plus efficace et plus engageant.
+        Chaque refonte est précédée d’un audit complet, suivi d’une restructuration technique et graphique, tout en préservant votre contenu essentiel et votre référencement. <br>
+        Notre priorité : vous offrir un site renouvelé, cohérent et performant, qui valorise votre image et répond aux standards actuels du web.</p>
+        <a href="contact.php" class="popup-btn">📩 Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup8 - Support -->
+  <div class="popup-overlay" id="popup8">
+    <div class="popup-box">
+      <div class="popup-image"><div class="placeholder"><img src="img/auto.jpg" alt="SUPPORT " ></div></div>
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup('popup8')">✖</button>
+        <h2>SUPPORT TECHNIQUE</h2>
+        <p>Nous proposons un service de support technique pour vous aider à résoudre rapidement les problèmes liés à votre site web ou à vos outils numériques. Qu’il s’agisse de bugs, de dysfonctionnements, de difficultés d’utilisation ou de questions techniques, nous intervenons avec efficacité et clarté.
+        Notre accompagnement est adapté à tous les niveaux, avec des explications simples, des solutions concrètes et un suivi personnalisé. L’objectif est de vous permettre de rester autonome tout en bénéficiant d’une assistance fiable en cas de besoin. <br>
+        Notre engagement : vous offrir un soutien technique accessible, réactif et orienté vers la  résolution.
+</p>
+        <a href="contact.php" class="popup-btn">📩 Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // mobile menu
+    document.getElementById("mobile-menu-button").addEventListener("click", function () {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
     });
-  }, { threshold: 0.1 });
-  sections.forEach(section => observer.observe(section));
-});
-</script>
 
+    // open / close modal (identique à service1 behaviour)
+    function openPopup(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = "flex";
+      document.body.style.overflow = 'hidden'; // prevent bg scroll
+    }
+    function closePopup(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = "none";
+      document.body.style.overflow = '';
+    }
+
+    // close when clicking overlay background
+    document.addEventListener('click', function(e){
+      if (e.target && e.target.classList && e.target.classList.contains('popup-overlay')) {
+        e.target.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
+
+    // reveal animations (unchanged)
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll(".page-enter");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting)
+              entry.target.classList.add("page-enter-active");
+          });
+        },
+        { threshold: 0.1 }
+      );
+      sections.forEach((section) => observer.observe(section));
+    });
+  </script>
 </body>
 </html>
